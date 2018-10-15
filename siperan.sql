@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 15, 2018 at 11:04 AM
+-- Generation Time: Oct 15, 2018 at 06:18 PM
 -- Server version: 10.2.18-MariaDB
 -- PHP Version: 7.2.10
 
@@ -32,15 +32,16 @@ CREATE TABLE `admins` (
   `admin_id` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `admins`
 --
 
-INSERT INTO `admins` (`admin_id`, `username`, `password`, `created_at`) VALUES
-(1, 'admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', '2018-10-15 11:01:44');
+INSERT INTO `admins` (`admin_id`, `username`, `password`, `created_at`, `updated_at`) VALUES
+(1, 'admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', '2018-10-15 11:01:44', '2018-10-15 11:01:44');
 
 -- --------------------------------------------------------
 
