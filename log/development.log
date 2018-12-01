@@ -1,0 +1,2652 @@
+Started GET "/" for 127.0.0.1 at 2018-11-13 04:26:51 +0700
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "siperan_development" does not exist
+):
+  
+activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:688:in `rescue in connect'
+activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:683:in `connect'
+activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:215:in `initialize'
+activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:40:in `new'
+activerecord (5.2.1) lib/active_record/connection_adapters/postgresql_adapter.rb:40:in `postgresql_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:809:in `new_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `checkout_new_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:832:in `try_to_checkout_new_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:793:in `acquire_connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:521:in `checkout'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:380:in `connection'
+activerecord (5.2.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1008:in `retrieve_connection'
+activerecord (5.2.1) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.1) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.1) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  [1m[35m (1669.2ms)[0m  [1m[35mCREATE DATABASE "siperan_development" ENCODING = 'unicode'[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (788.5ms)[0m  [1m[35mCREATE DATABASE "siperan_test" ENCODING = 'unicode'[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2018-11-13 04:30:09 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/wisnu/.rvm/gems/ruby-2.5.3/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/wisnu/.rvm/gems/ruby-2.5.3/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 20ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-13 05:17:02 +0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for StaffController):
+  
+actionpack (5.2.1) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-11-13 05:17:30 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1685ms (Views: 1676.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-13 05:17:49 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:29:59 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (129.3ms)
+Completed 200 OK in 154ms (Views: 152.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:32:21 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :check_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:32:21 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :check_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:32:21 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :check_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:32:21 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :check_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:32:21 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :check_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:32:21 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :check_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:32:21 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :check_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:32:21 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :check_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:32:21 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :check_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:32:21 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :check_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:32:21 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :check_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:32:21 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :check_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:32:21 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :check_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:32:21 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :check_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:32:21 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :check_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:32:22 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :check_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:32:22 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :check_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:32:22 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :check_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:32:22 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :check_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:32:22 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :check_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:32:22 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :check_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:32:55 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:38:21 +0700
+  
+SyntaxError (/home/wisnu/Repos/github/wisn/siperan/app/controllers/admin_controller.rb:16: syntax error, unexpected tIDENTIFIER, expecting '('
+...     is_logged_in = not session[:user_type].nil?
+...                        ^~~~~~~):
+  
+app/controllers/admin_controller.rb:16: syntax error, unexpected tIDENTIFIER, expecting '('
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:38:37 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2018-11-13 05:38:40 +0700
+Processing by AdminController#index as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :check_session rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:38:40 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:40:32 +0700
+  
+SyntaxError (/home/wisnu/Repos/github/wisn/siperan/app/controllers/admin_controller.rb:17: syntax error, unexpected '='
+      is_logged_in? = not(session[:user_type].nil?)
+                    ^):
+  
+app/controllers/admin_controller.rb:17: syntax error, unexpected '='
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:40:44 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:45:16 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:50:45 +0700
+  
+SyntaxError (/home/wisnu/Repos/github/wisn/siperan/app/controllers/admin_controller.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+        create_session @admin
+        ^~~~~~~~~~~~~~
+/home/wisnu/Repos/github/wisn/siperan/app/controllers/admin_controller.rb:55: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/admin_controller.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/admin_controller.rb:55: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:52:02 +0700
+  
+SyntaxError (/home/wisnu/Repos/github/wisn/siperan/app/controllers/admin_controller.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+        create_session @admin
+        ^~~~~~~~~~~~~~
+/home/wisnu/Repos/github/wisn/siperan/app/controllers/admin_controller.rb:60: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/admin_controller.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/admin_controller.rb:60: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:52:15 +0700
+  
+SyntaxError (/home/wisnu/Repos/github/wisn/siperan/app/controllers/admin_controller.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+        create_session @admin
+        ^~~~~~~~~~~~~~
+/home/wisnu/Repos/github/wisn/siperan/app/controllers/admin_controller.rb:60: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/admin_controller.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/admin_controller.rb:60: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:52:38 +0700
+  
+SyntaxError (/home/wisnu/Repos/github/wisn/siperan/app/controllers/admin_controller.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+        create_session @admin
+        ^~~~~~~~~~~~~~
+/home/wisnu/Repos/github/wisn/siperan/app/controllers/admin_controller.rb:60: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/admin_controller.rb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/admin_controller.rb:60: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 05:52:54 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (173.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (119.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to CreateAdmins (20181112225826)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (95.7ms)[0m  [1m[35mCREATE TABLE "admins" ("id" bigserial primary key, "username" character varying, "password" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181112225826_create_admins.rb:3
+  [1m[35m (62.1ms)[0m  [1m[35mCREATE  INDEX  "index_admins_on_username" ON "admins"  ("username")[0m
+  ↳ db/migrate/20181112225826_create_admins.rb:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181112225826"]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (28.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to AddDefaultUserToAdmin (20181112230026)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mAdmin Create (0.7ms)[0m  [1m[32mINSERT INTO "admins" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "admin"], ["password", "admin"], ["created_at", "2018-11-12 23:01:26.721807"], ["updated_at", "2018-11-12 23:01:26.721807"]]
+  ↳ db/migrate/20181112230026_add_default_user_to_admin.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181112230026"]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (13.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-12 23:01:26.749363"], ["updated_at", "2018-11-12 23:01:26.749363"]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (9.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to AddDefaultUserToAdmin (20181112230026)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ db/migrate/20181112230026_add_default_user_to_admin.rb:7
+  [1m[36mAdmin Destroy (0.6ms)[0m  [1m[31mDELETE FROM "admins" WHERE "admins"."id" = $1[0m  [["id", 1]]
+  ↳ db/migrate/20181112230026_add_default_user_to_admin.rb:7
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20181112230026"]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (61.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to AddDefaultUserToAdmin (20181112230026)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mAdmin Create (0.5ms)[0m  [1m[32mINSERT INTO "admins" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "admin"], ["password", "admin"], ["created_at", "2018-11-12 23:02:38.578460"], ["updated_at", "2018-11-12 23:02:38.578460"]]
+  ↳ db/migrate/20181112230026_add_default_user_to_admin.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181112230026"]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (29.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to AddDefaultUserToAdmin (20181112230026)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mAdmin Create (0.6ms)[0m  [1m[32mINSERT INTO "admins" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "admin"], ["password", "admin"], ["created_at", "2018-11-12 23:03:03.695333"], ["updated_at", "2018-11-12 23:03:03.695333"]]
+  ↳ db/migrate/20181112230026_add_default_user_to_admin.rb:3
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20181112230026"]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (23.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to AddDefaultUserToAdmin (20181112230026)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mAdmin Create (0.4ms)[0m  [1m[32mINSERT INTO "admins" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "admin"], ["password", "admin"], ["created_at", "2018-11-12 23:03:03.745281"], ["updated_at", "2018-11-12 23:03:03.745281"]]
+  ↳ db/migrate/20181112230026_add_default_user_to_admin.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181112230026"]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (23.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to AddDefaultUserToAdmin (20181112230026)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mAdmin Destroy (0.6ms)[0m  [1m[31mDELETE FROM "admins"[0m
+  ↳ db/migrate/20181112230026_add_default_user_to_admin.rb:7
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20181112230026"]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (80.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to AddDefaultUserToAdmin (20181112230026)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mAdmin Create (0.5ms)[0m  [1m[32mINSERT INTO "admins" ("username", "password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "admin"], ["password", "admin"], ["created_at", "2018-11-12 23:06:15.725283"], ["updated_at", "2018-11-12 23:06:15.725283"]]
+  ↳ db/migrate/20181112230026_add_default_user_to_admin.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181112230026"]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (36.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (388.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "siperan_development"[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (333.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "siperan_test"[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (930.6ms)[0m  [1m[35mCREATE DATABASE "siperan_development" ENCODING = 'unicode'[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (901.9ms)[0m  [1m[35mCREATE DATABASE "siperan_test" ENCODING = 'unicode'[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (152.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (109.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to CreateAdmins (20181112225826)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (131.2ms)[0m  [1m[35mCREATE TABLE "admins" ("id" bigserial primary key, "username" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20181112225826_create_admins.rb:3
+  [1m[35m (29.4ms)[0m  [1m[35mCREATE  INDEX  "index_admins_on_username" ON "admins"  ("username")[0m
+  ↳ db/migrate/20181112225826_create_admins.rb:9
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181112225826"]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (11.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to AddDefaultUserToAdmin (20181112230026)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to AddDefaultUserToAdmin (20181112230026)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to AddDefaultUserToAdmin (20181112230026)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to AddDefaultUserToAdmin (20181112230026)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to AddDefaultUserToAdmin (20181112230026)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181112230026"]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (39.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-12 23:10:36.974895"], ["updated_at", "2018-11-12 23:10:36.974895"]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (11.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to AddDefaultUserToAdmin (20181112230026)
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mAdmin Destroy (0.5ms)[0m  [1m[31mDELETE FROM "admins"[0m
+  ↳ db/migrate/20181112230026_add_default_user_to_admin.rb:7
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20181112230026"]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (95.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to AddDefaultUserToAdmin (20181112230026)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mAdmin Create (0.7ms)[0m  [1m[32mINSERT INTO "admins" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "admin"], ["password_digest", "$2a$10$qj49PE7.zORLVxFuwHGOYeL23cOdyRjweXid7mxJ523bUAlYT1d.W"], ["created_at", "2018-11-12 23:11:40.960709"], ["updated_at", "2018-11-12 23:11:40.960709"]]
+  ↳ db/migrate/20181112230026_add_default_user_to_admin.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20181112230026"]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (31.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5213888222160239160)[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 06:12:20 +0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 37ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2018-11-13 06:12:22 +0700
+Processing by AdminController#login_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kMlM4uJHNgSf678QnIk75N25zygA2BRN+ZZiLUEUV/YcGwIzl+cft+8PzSreD8HjgwKfsijjPyjtPm96qyXswQ==", "admin"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Save Admin"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/admin.rb:2:in `<class:Admin>'
+app/models/admin.rb:1:in `<main>'
+app/controllers/admin_controller.rb:14:in `login_validation'
+Started POST "/admin/login" for 127.0.0.1 at 2018-11-13 06:12:34 +0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by AdminController#login_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kMlM4uJHNgSf678QnIk75N25zygA2BRN+ZZiLUEUV/YcGwIzl+cft+8PzSreD8HjgwKfsijjPyjtPm96qyXswQ==", "admin"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Save Admin"}
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 247ms (Views: 221.9ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 06:15:04 +0700
+  
+SyntaxError (/home/wisnu/Repos/github/wisn/siperan/config/routes.rb:10: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+    get '/login', to: 'admin#login',
+        ^
+/home/wisnu/Repos/github/wisn/siperan/config/routes.rb:10: syntax error, unexpected ',', expecting keyword_end
+    get '/login', to: 'admin#login',
+                ^
+/home/wisnu/Repos/github/wisn/siperan/config/routes.rb:10: syntax error, unexpected ',', expecting keyword_end
+...et '/login', to: 'admin#login',
+...                              ^):
+  
+config/routes.rb:10: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+config/routes.rb:10: syntax error, unexpected ',', expecting keyword_end
+config/routes.rb:10: syntax error, unexpected ',', expecting keyword_end
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 06:15:19 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2018-11-13 06:15:22 +0700
+Processing by AdminController#login_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EaisQywfOvI/OqoS+KT8Ns+T7kNAHh66b9TOzd3jiJKdeuKSWb8TQU/e2Ci6IgYxkSi+2WglNd97fMOaN9IzpQ==", "admin"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Save Admin"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/wisnu/Repos/github/wisn/siperan/app/models/admin.rb:12: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates :password,
+            ^
+/home/wisnu/Repos/github/wisn/siperan/app/models/admin.rb:13: Can't assign to true
+    presence: true,
+                  ^
+/home/wisnu/Repos/github/wisn/siperan/app/models/admin.rb:14: syntax error, unexpected ',', expecting keyword_end
+    length: { minimum: 4 },
+                          ^):
+  
+app/models/admin.rb:12: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/models/admin.rb:13: Can't assign to true
+app/models/admin.rb:14: syntax error, unexpected ',', expecting keyword_end
+app/controllers/admin_controller.rb:14:in `login_validation'
+Started POST "/admin/login" for 127.0.0.1 at 2018-11-13 06:15:36 +0700
+Processing by AdminController#login_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EaisQywfOvI/OqoS+KT8Ns+T7kNAHh66b9TOzd3jiJKdeuKSWb8TQU/e2Ci6IgYxkSi+2WglNd97fMOaN9IzpQ==", "admin"=>{"username"=>"", "password"=>"[FILTERED]"}, "commit"=>"Save Admin"}
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 53ms (Views: 32.8ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 06:19:00 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2018-11-13 06:19:05 +0700
+Processing by AdminController#login_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oOUJlKRawCaKJHKYO55jp90CgVOsMK25oMKqnXth3rQsN0dF0frplfrAAKJ5GJmgg7nRyYQLhty0aqfKkVBlgw==", "admin"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Save Admin"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/admin_controller.rb:17
+Redirected to http://127.0.0.1:3000/admin/dashboard
+Completed 302 Found in 218ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-11-13 06:19:05 +0700
+Processing by AdminController#dashboard as HTML
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/logout" for 127.0.0.1 at 2018-11-13 06:19:09 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/admin/logout"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/logout" for 127.0.0.1 at 2018-11-13 06:19:22 +0700
+Processing by AdminController#logout as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 06:19:22 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/dashboard
+Filter chain halted as :redirect_if_admin rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-11-13 06:19:22 +0700
+Processing by AdminController#dashboard as HTML
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/logout" for 127.0.0.1 at 2018-11-13 06:19:27 +0700
+Processing by AdminController#logout as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 06:19:27 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/dashboard
+Filter chain halted as :redirect_if_admin rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-11-13 06:19:27 +0700
+Processing by AdminController#dashboard as HTML
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-11-13 06:20:11 +0700
+Processing by AdminController#dashboard as HTML
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/logout" for 127.0.0.1 at 2018-11-13 06:20:15 +0700
+Processing by AdminController#logout as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 06:20:15 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/dashboard
+Filter chain halted as :redirect_if_admin rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-11-13 06:20:15 +0700
+Processing by AdminController#dashboard as HTML
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-11-13 06:20:25 +0700
+Processing by AdminController#dashboard as HTML
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2018-11-13 06:20:27 +0700
+Processing by AdminController#index as HTML
+Completed 406 Not Acceptable in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (AdminController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/" for 127.0.0.1 at 2018-11-13 06:20:45 +0700
+Processing by AdminController#index as HTML
+Redirected to http://127.0.0.1:3000/admin/dashboard
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-11-13 06:20:45 +0700
+Processing by AdminController#dashboard as HTML
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/loing" for 127.0.0.1 at 2018-11-13 06:20:48 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/admin/loing"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 06:20:50 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/dashboard
+Filter chain halted as :redirect_if_admin rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-11-13 06:20:50 +0700
+Processing by AdminController#dashboard as HTML
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/logout" for 127.0.0.1 at 2018-11-13 06:21:08 +0700
+Processing by AdminController#logout as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 06:21:08 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/dashboard
+Filter chain halted as :redirect_if_admin rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-11-13 06:21:08 +0700
+Processing by AdminController#dashboard as HTML
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-11-13 06:21:34 +0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by AdminController#dashboard as HTML
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 228ms (Views: 219.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/logout" for 127.0.0.1 at 2018-11-13 06:21:37 +0700
+Processing by AdminController#logout as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 06:21:37 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/dashboard
+Filter chain halted as :redirect_if_admin rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-11-13 06:21:37 +0700
+Processing by AdminController#dashboard as HTML
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-11-13 06:21:47 +0700
+Processing by AdminController#dashboard as HTML
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/logout" for 127.0.0.1 at 2018-11-13 06:21:50 +0700
+Processing by AdminController#logout as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 06:21:50 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/dashboard
+Filter chain halted as :redirect_if_admin rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-11-13 06:21:50 +0700
+Processing by AdminController#dashboard as HTML
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-11-13 06:22:15 +0700
+Processing by AdminController#dashboard as HTML
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/logout" for 127.0.0.1 at 2018-11-13 06:22:18 +0700
+Processing by AdminController#logout as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 06:22:19 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/dashboard
+Filter chain halted as :redirect_if_admin rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-11-13 06:22:19 +0700
+Processing by AdminController#dashboard as HTML
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-11-13 06:23:16 +0700
+Processing by AdminController#dashboard as HTML
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/logout" for 127.0.0.1 at 2018-11-13 06:23:20 +0700
+Processing by AdminController#logout as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 06:23:20 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 06:23:36 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/dashboard
+Filter chain halted as :redirect_if_admin rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-11-13 06:23:36 +0700
+Processing by AdminController#dashboard as HTML
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-11-13 06:23:59 +0700
+Processing by AdminController#dashboard as HTML
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/dashboard.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/logout" for 127.0.0.1 at 2018-11-13 06:24:01 +0700
+Processing by AdminController#logout as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 06:24:01 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-11-13 06:24:05 +0700
+Processing by AdminController#dashboard as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Filter chain halted as :redirect_if_not_admin rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-11-13 06:24:05 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2018-11-13 06:24:11 +0700
+Processing by AdminController#login_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DvYEBuf5Aiyi2JsFdUw/nsQFGarJ0sS4u8AWcl5AhHuCJErXklkrn9I86T83ysWZmr5JMOHp792vaBsltHE/TA==", "admin"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Save Admin"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/admin_controller.rb:18
+Completed 500 Internal Server Error in 237ms (ActiveRecord: 10.2ms)
+
+
+  
+NoMethodError (undefined method `message' for #<ActiveModel::Errors:0x00007fb9f1ab1708>
+Did you mean?  messages):
+  
+app/controllers/admin_controller.rb:25:in `login_validation'
+Started POST "/admin/login" for 127.0.0.1 at 2018-11-13 06:24:24 +0700
+Processing by AdminController#login_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DvYEBuf5Aiyi2JsFdUw/nsQFGarJ0sS4u8AWcl5AhHuCJErXklkrn9I86T83ysWZmr5JMOHp792vaBsltHE/TA==", "admin"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Save Admin"}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/admin_controller.rb:18
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 237ms (Views: 19.7ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:09:24 +0700
+  [1m[35m (32.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 749ms (Views: 723.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:22:29 +0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 2954ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (CssSyntaxError: /home/wisnu/Repos/github/wisn/siperan/app/assets/stylesheets/application.css:18:1: Unknown word
+
+  16 | 
+  17 | 
+> 18 | = require_tree .
+     | ^
+  19 | 
+  20 | 
+):
+    12:     <%= csrf_meta_tags %>
+    13:     <%= csp_meta_tag %>
+    14: 
+    15:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    16:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    17:   </head>
+    18:   <body>
+  
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___3897225556192904632_47146709886980'
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:23:37 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "= require_tree .": expected "{", was ""):
+    12:     <%= csrf_meta_tags %>
+    13:     <%= csp_meta_tag %>
+    14: 
+    15:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    16:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    17:   </head>
+    18:   <body>
+  
+app/assets/stylesheets/application.scss:20
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___3897225556192904632_69958894474160'
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:23:56 +0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 198ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "= require_tree .": expected "{", was ""):
+    12:     <%= csrf_meta_tags %>
+    13:     <%= csp_meta_tag %>
+    14: 
+    15:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    16:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    17:   </head>
+    18:   <body>
+  
+app/assets/stylesheets/application.scss:20
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___463961045226978876_47395716874080'
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:24:13 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "= require_self": expected "{", was ""):
+    12:     <%= csrf_meta_tags %>
+    13:     <%= csp_meta_tag %>
+    14: 
+    15:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    16:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    17:   </head>
+    18:   <body>
+  
+app/assets/stylesheets/application.scss:20
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___463961045226978876_70157134734180'
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:24:48 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "require_tree .": expected "{", was ""):
+    12:     <%= csrf_meta_tags %>
+    13:     <%= csp_meta_tag %>
+    14: 
+    15:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    16:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    17:   </head>
+    18:   <body>
+  
+app/assets/stylesheets/application.scss:21
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___463961045226978876_70157133659220'
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:25:02 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 7132ms (Views: 7130.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:26:01 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:31:40 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 50ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:31:48 +0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 283ms (Views: 270.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:35:07 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (170.4ms)
+Completed 200 OK in 198ms (Views: 197.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:35:18 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:35:50 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 33ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:36:04 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:37:16 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (0.5ms)
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:37:17 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 5778ms (Views: 5777.4ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 4780ms (Views: 4778.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:38:10 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (1.0ms)
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:38:12 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4093ms (Views: 4091.4ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 3379ms (Views: 3377.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:38:17 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:38:25 +0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 280ms (Views: 271.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:40:02 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 3735ms (Views: 3733.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:40:48 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after " */": expected "{", was ""):
+    12:     <%= csrf_meta_tags %>
+    13:     <%= csp_meta_tag %>
+    14: 
+    15:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    16:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    17:   </head>
+    18:   <body>
+  
+app/assets/stylesheets/application.scss:21
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___1482503905128919842_70034952701040'
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:40:52 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after " */": expected "{", was ""):
+    12:     <%= csrf_meta_tags %>
+    13:     <%= csp_meta_tag %>
+    14: 
+    15:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    16:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    17:   </head>
+    18:   <body>
+  
+app/assets/stylesheets/application.scss:21
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___1482503905128919842_70034955420100'
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:41:32 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after " */": expected "{", was ""):
+    12:     <%= csrf_meta_tags %>
+    13:     <%= csp_meta_tag %>
+    14: 
+    15:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    16:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    17:   </head>
+    18:   <body>
+  
+app/assets/stylesheets/application.scss:23
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___1482503905128919842_70034946909380'
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:41:53 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after " */": expected "{", was ""):
+    12:     <%= csrf_meta_tags %>
+    13:     <%= csp_meta_tag %>
+    14: 
+    15:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    16:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    17:   </head>
+    18:   <body>
+  
+app/assets/stylesheets/application.scss:19
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___1482503905128919842_70034956599460'
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:42:03 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 646ms (Views: 644.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:42:04 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:42:23 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2644ms (Views: 2643.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:42:51 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 622ms (Views: 621.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:44:45 +0700
+Processing by StaffController#index as HTML
+  Rendering staff/index.html.erb within layouts/application
+  Rendered staff/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2956ms (Views: 2954.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:55:02 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 60ms (Views: 58.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:55:22 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 22:58:14 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:13:59 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:17:48 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:19:19 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2759ms (Views: 2758.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:27:20 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2895ms (Views: 2893.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:27:40 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2750ms (Views: 2749.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:28:52 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2690ms (Views: 2688.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:31:58 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:32:34 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:34:54 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3123ms (Views: 3121.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:35:24 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2962ms (Views: 2960.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:35:59 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2986ms (Views: 2984.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:36:39 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2766ms (Views: 2765.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:36:54 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:37:07 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2936ms (Views: 2934.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:47:12 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (199.3ms)
+Completed 500 Internal Server Error in 204ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `fa_icon' for #<#<Class:0x00007f6489490d50>:0x00007f6488dab670>):
+    12:     <form>
+    13:       <div class="row">
+    14:         <div class="col-sm-2">
+    15:           <%= fa_icon 'user' %>
+    16:         </div>
+    17:         <div class="col-sm-10"></div>
+    18:       </div>
+  
+app/views/staff/login.html.erb:15:in `_app_views_staff_login_html_erb__3258566579300876299_70034884755520'
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:47:21 +0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 5412ms (Views: 5402.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:47:39 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3182ms (Views: 3181.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:48:11 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3278ms (Views: 3276.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:48:21 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3248ms (Views: 3246.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:49:33 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3276ms (Views: 3274.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:49:47 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3300ms (Views: 3296.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:50:17 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3364ms (Views: 3362.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:50:53 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:51:41 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3247ms (Views: 3245.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:51:54 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3458ms (Views: 3456.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:52:25 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3279ms (Views: 3277.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:52:46 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3107ms (Views: 3105.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:53:06 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 3234ms (Views: 3232.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:59:25 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3272ms (Views: 3270.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-30 23:59:49 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3435ms (Views: 3433.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:00:10 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3310ms (Views: 3308.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:00:32 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:00:43 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3737ms (Views: 3736.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:01:39 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3316ms (Views: 3314.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:10:04 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:11:09 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3687ms (Views: 3685.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:11:23 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3325ms (Views: 3322.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:13:55 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:14:27 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:15:04 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3311ms (Views: 3309.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:18:14 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 3204ms (Views: 3203.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:18:31 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3300ms (Views: 3298.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:18:43 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3223ms (Views: 3222.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:19:26 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3233ms (Views: 3230.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:19:38 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3916ms (Views: 3914.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:19:55 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 3533ms (Views: 3532.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:20:06 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3541ms (Views: 3539.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:20:20 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3370ms (Views: 3368.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:20:36 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3346ms (Views: 3345.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:20:47 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3508ms (Views: 3507.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:21:38 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3327ms (Views: 3325.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:21:54 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3324ms (Views: 3323.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:22:05 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3327ms (Views: 3325.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:23:02 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3244ms (Views: 3243.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:23:51 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 3256ms (Views: 3254.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:47:21 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 49ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:48:30 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3201ms (Views: 3199.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:49:17 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3306ms (Views: 3305.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:50:00 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 3525ms (Views: 3523.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:50:35 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3228ms (Views: 3227.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:51:00 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:51:08 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 3412ms (Views: 3409.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:51:26 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3308ms (Views: 3306.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:51:47 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3333ms (Views: 3331.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:51:58 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 3297ms (Views: 3294.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:52:19 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3295ms (Views: 3294.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:53:12 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3217ms (Views: 3215.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:54:21 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3465ms (Views: 3463.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:55:27 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3398ms (Views: 3397.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 00:55:45 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 01:00:19 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 01:01:03 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3363ms (Views: 3362.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 01:01:59 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3392ms (Views: 3391.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 01:02:21 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 3308ms (Views: 3307.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 01:02:42 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3385ms (Views: 3384.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 01:02:52 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3379ms (Views: 3377.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 01:03:51 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3369ms (Views: 3365.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 01:04:13 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3317ms (Views: 3316.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 01:04:41 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3428ms (Views: 3426.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 01:06:26 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3433ms (Views: 3431.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 01:06:49 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3275ms (Views: 3274.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 01:07:11 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 3249ms (Views: 3247.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 01:08:45 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 01:09:57 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 01:59:00 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:10:30 +0700
+  [1m[35m (25.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (166.3ms)
+Completed 200 OK in 1438ms (Views: 1412.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:20:08 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:21:30 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 6115ms (Views: 6113.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:21:58 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3338ms (Views: 3337.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:24:46 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3414ms (Views: 3413.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:26:34 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3326ms (Views: 3325.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:26:49 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3468ms (Views: 3466.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:27:04 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3484ms (Views: 3482.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:27:22 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3322ms (Views: 3320.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:28:42 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:29:00 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 3496ms (Views: 3495.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:37:00 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-12-01 10:37:02 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (188.5ms)
+Completed 200 OK in 236ms (Views: 222.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:38:43 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 3326ms (Views: 3324.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:42:29 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:43:30 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:43:34 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:44:42 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3500ms (Views: 3498.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:45:07 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3278ms (Views: 3276.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:45:31 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3367ms (Views: 3365.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:46:39 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3388ms (Views: 3386.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:46:57 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:47:13 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3324ms (Views: 3323.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:47:46 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3260ms (Views: 3259.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:49:41 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3315ms (Views: 3314.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:49:54 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3475ms (Views: 3474.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:54:54 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 3334ms (Views: 3332.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 10:55:03 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3354ms (Views: 3352.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 11:00:21 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 58ms (Views: 56.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 11:00:36 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 11:00:48 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 34ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/developer/" for 127.0.0.1 at 2018-12-01 11:03:54 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/developer"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-12-01 11:04:56 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 11:21:16 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 3517ms (Views: 3515.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-12-01 11:22:14 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 30ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login/" for 127.0.0.1 at 2018-12-01 11:26:03 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login/" for 127.0.0.1 at 2018-12-01 11:28:37 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login/" for 127.0.0.1 at 2018-12-01 11:28:49 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login/" for 127.0.0.1 at 2018-12-01 11:29:19 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 3449ms (Views: 3447.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login/" for 127.0.0.1 at 2018-12-01 11:30:11 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/login/" for 127.0.0.1 at 2018-12-01 11:30:17 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/staff/login"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/staff/login/" for 127.0.0.1 at 2018-12-01 11:31:42 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login/" for 127.0.0.1 at 2018-12-01 11:31:47 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 54ms (Views: 52.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/login/" for 127.0.0.1 at 2018-12-01 11:31:50 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/login/" for 127.0.0.1 at 2018-12-01 11:32:09 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 57ms (Views: 56.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login/" for 127.0.0.1 at 2018-12-01 11:32:11 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login/" for 127.0.0.1 at 2018-12-01 11:32:27 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered admin/login.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 36ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/login/" for 127.0.0.1 at 2018-12-01 11:32:31 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered staff/login.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+

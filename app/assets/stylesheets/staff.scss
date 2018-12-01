@@ -1,0 +1,106 @@
+// Place all the styles related to the staff controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.staff-login {
+  .container {
+    margin: 8em auto 6em;
+  }
+
+  h1.title {
+    font-size: 48pt;
+    margin: 0;
+    text-align: center;
+  }
+
+  .version {
+    font-size: 10pt;
+    font-weight: 900;
+    margin-left: -1.5em;
+    margin-right: -1em;
+    position: relative;
+    top: -3em;
+  }
+
+  h2.subtitle {
+    font-size: 16pt;
+    margin: 0;
+    text-align: center;
+  }
+
+  form {
+    display: block;
+    margin: 6em auto;
+    width: 400px;
+
+    i.fa {
+      color: #303f9f;
+      display: block;
+      font-size: 22pt;
+      margin: .125em 0 0 .75em;
+
+      &.custom-key {
+        background-color: #303f9f;
+        border-radius: 100%;
+        color: #efefef;
+        font-size: 18pt;
+        height: 31px;
+        margin-left: .85em;
+        padding: 2px;
+        width: 31px;
+      }
+    }
+
+    input:not([type=submit]):not([type=checkbox]) {
+      background-color: transparent;
+      border: 0;
+      border-bottom: 2px solid #222;
+      display: block;
+      font-size: 14pt;
+      width: 90%;
+
+      &:not(:focus) {
+        border-bottom: 2px solid #999;
+      }
+    }
+
+    label {
+      display: inline-block;
+      cursor: pointer;
+      margin: 0 auto;
+
+      input {
+        margin-right: 1em;
+        position: relative;
+        top: 2px;
+      }
+
+      span {
+        display: inline-block;
+      }
+    }
+
+    .row:not(:first-child) {
+      margin-top: 2em;
+    }
+
+    input[type=submit] {
+      border: 2px solid #303f9f;
+      display: block;
+      font-size: 14pt;
+      margin: 0 auto;
+      padding: .5em 3em;
+
+      &:hover {
+        background-color: transparent;
+        color: #303f9f;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .links {
+    text-align: center;
+  }
+}
+

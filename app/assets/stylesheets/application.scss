@@ -1,0 +1,78 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+listed * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ */
+
+/* Use Bootstrap 4 */
+@import "bootstrap";
+
+/* Configure default stylesheet in general */
+body {
+  background-color: #efefef;
+  color: #222;
+  cursor: default;
+  font-size: 12pt;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.dark-primary-color-fg {
+  color: #303f9f;
+}
+
+.dark-primary-color-bg {
+  background-color: #303f9f;
+  color: #fff;
+}
+
+.light-primary-color-fg {
+  color: #c5cae9;
+}
+
+.light-primary-color-bg {
+  background-color: #c5cae9;
+  color: #222;
+}
+
+footer.single-page {
+  margin: 6em auto 2em;
+
+  .copyright {
+    font-size: 10pt;
+  }
+
+  .navigation {
+    font-size: 9pt;
+    text-align: right;
+
+    a {
+      display: inline-block;
+
+      &:not(:last-child) {
+        border-right: 1px solid #999;
+        margin-right: 1em;
+        padding-right: 1em;
+      }
+    }
+  }
+}
+
+/* Import all necessary stylesheets */
+@import "staff";
+@import "admin";
+
+/* Import font-awesome for icon */
+@import "font-awesome";
+

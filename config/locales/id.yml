@@ -1,0 +1,14 @@
+id:
+  app:
+    title: 'SIPERAN'
+    title-long: 'Sistem Informasi Pengelola Perpustakaan'
+    version: '1.0.0'
+  admin:
+    login:
+      title: 'Masuk ke SIPERAN'
+      as-admin: 'masuk sebagai pengurus'
+  staff:
+    login:
+      title: 'Masuk ke SIPERAN'
+      as-staff: 'masuk sebagai staf'
+
