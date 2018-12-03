@@ -7,6 +7,8 @@ class AdminController < ApplicationController
 
   def login
     redirect_if_admin
+
+    redirect_if_staff
   end
 
   def login_validation
@@ -221,7 +223,7 @@ class AdminController < ApplicationController
 
   private
     def redirect_if_not_admin
-      is_logged_in = not(session[:user_type].nil?)
+      is_logged_in = session[:user_type].present?
 
       if is_logged_in
         is_staff = session[:user_type] == 'staff'
@@ -234,6 +236,11 @@ class AdminController < ApplicationController
     def redirect_if_admin
       is_admin = session[:user_type] == 'admin'
       redirect_to(:admin_dashboard) if is_admin
+    end
+
+    def redirect_if_staff
+      is_staff = session[:user_type] == 'staff'
+      redirect_to(:staff_dashbaord) if is_staff
     end
 
     def login_params

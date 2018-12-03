@@ -73,7 +73,18 @@ Rails.application.routes.draw do
   end
 
   scope :staff do
+    get '/', to: 'staff#index',
+      as: :staff_root
+
     get :login, to: 'staff#login',
       as: :staff_login
+
+    post :login, to: 'staff#login_validation',
+      as: :staff_login_validation
+
+    scope :dashboard do
+      get '/', to: 'staff#dashboard',
+        as: :staff_dashboard
+    end
   end
 end

@@ -9141,3 +9141,819 @@ Processing by AdminController#manage_staff as HTML
 Completed 200 OK in 64ms (Views: 61.4ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/admin/logout/" for 127.0.0.1 at 2018-12-04 05:05:41 +0700
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by AdminController#logout as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-12-04 05:05:41 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered admin/login.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 5063ms (Views: 5061.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-12-04 05:06:00 +0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered admin/login.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 315ms (Views: 305.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2018-12-04 05:07:00 +0700
+Processing by AdminController#login_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9zHnY8UUidIdqOevwmrFa/EQJ9qIf/8uECA68MTGkOKyFidUwOZYzUcV4jpG7NUZ0yHA06FfW1sU+tHja+QHCQ==", "admin"=>{"username"=>"admin", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/admin_controller.rb:17
+Redirected to http://127.0.0.1:3000/admin/dashboard
+Completed 302 Found in 227ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-12-04 05:07:00 +0700
+Processing by AdminController#dashboard as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "staffs"[0m
+  ↳ app/controllers/admin_controller.rb:158
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/admin_controller.rb:159
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions"[0m
+  ↳ app/controllers/admin_controller.rb:160
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/_dashboard_header.html.erb (0.5ms)
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered admin/dashboard.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 77ms (Views: 54.6ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/admin/dashboard/staff/" for 127.0.0.1 at 2018-12-04 05:07:03 +0700
+Processing by AdminController#manage_staff as HTML
+  Rendering admin/manage_staff.html.erb within layouts/application
+  Rendered admin/_dashboard_header.html.erb (1.3ms)
+  [1m[36mStaff Load (0.3ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs"[0m
+  ↳ app/views/admin/manage_staff.html.erb:19
+  Rendered partial/_footer.html.erb (0.7ms)
+  Rendered admin/manage_staff.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 58ms (Views: 52.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/admin/dashboard/remove_staff/wisn/" for 127.0.0.1 at 2018-12-04 05:07:04 +0700
+Processing by AdminController#remove_staff as HTML
+  Parameters: {"username"=>"wisn"}
+  [1m[36mStaff Load (0.4ms)[0m  [1m[34mSELECT  "staffs".* FROM "staffs" WHERE "staffs"."username" = $1 LIMIT $2[0m  [["username", "wisn"], ["LIMIT", 1]]
+  ↳ app/controllers/admin_controller.rb:216
+  [1m[36mStaff Destroy (11.4ms)[0m  [1m[31mDELETE FROM "staffs" WHERE "staffs"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/admin_controller.rb:217
+Redirected to http://127.0.0.1:3000/admin/dashboard/staff
+Completed 302 Found in 17ms (ActiveRecord: 11.8ms)
+
+
+Started GET "/admin/dashboard/staff" for 127.0.0.1 at 2018-12-04 05:07:04 +0700
+Processing by AdminController#manage_staff as HTML
+  Rendering admin/manage_staff.html.erb within layouts/application
+  Rendered admin/_dashboard_header.html.erb (1.1ms)
+  [1m[36mStaff Load (0.4ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs"[0m
+  ↳ app/views/admin/manage_staff.html.erb:19
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered admin/manage_staff.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 44ms (Views: 41.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/dashboard/" for 127.0.0.1 at 2018-12-04 05:07:05 +0700
+Processing by AdminController#dashboard as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "staffs"[0m
+  ↳ app/controllers/admin_controller.rb:158
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/admin_controller.rb:159
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions"[0m
+  ↳ app/controllers/admin_controller.rb:160
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/_dashboard_header.html.erb (0.4ms)
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered admin/dashboard.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 50ms (Views: 43.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/admin/dashboard/staff/" for 127.0.0.1 at 2018-12-04 05:07:29 +0700
+Processing by AdminController#manage_staff as HTML
+  Rendering admin/manage_staff.html.erb within layouts/application
+  Rendered admin/_dashboard_header.html.erb (0.7ms)
+  [1m[36mStaff Load (0.4ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs"[0m
+  ↳ app/views/admin/manage_staff.html.erb:19
+  Rendered partial/_footer.html.erb (0.6ms)
+  Rendered admin/manage_staff.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 62ms (Views: 60.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/dashboard/new_staff" for 127.0.0.1 at 2018-12-04 05:07:43 +0700
+Processing by AdminController#new_staff as HTML
+  Rendering admin/new_staff.html.erb within layouts/application
+  Rendered admin/_dashboard_header.html.erb (1.1ms)
+  Rendered partial/_footer.html.erb (0.6ms)
+  Rendered admin/new_staff.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 59ms (Views: 57.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/dashboard/new_staff" for 127.0.0.1 at 2018-12-04 05:08:06 +0700
+Processing by AdminController#new_staff_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0r5bHs1WvHMgZ5gwJRx97i7Ep5T1qxjifN4eGLUlSJnJe7bshaxInI9J1mLf6SFB1HT4U3gper09ltYgBmY8sQ==", "staff"=>{"fullname"=>"Wisnu Adi Nurcahyo", "username"=>"wisn", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/admin_controller.rb:175
+  [1m[36mStaff Create (0.6ms)[0m  [1m[32mINSERT INTO "staffs" ("fullname", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fullname", "Wisnu Adi Nurcahyo"], ["username", "wisn"], ["password_digest", "$2a$10$T5iowUkpz66B3GAMInQ/weKds/q1viC52BD7gcZhySbXc1h5p3xFm"], ["created_at", "2018-12-03 22:08:06.221131"], ["updated_at", "2018-12-03 22:08:06.221131"]]
+  ↳ app/controllers/admin_controller.rb:175
+  [1m[35m (81.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/admin_controller.rb:175
+Redirected to http://127.0.0.1:3000/admin/dashboard/staff
+Completed 302 Found in 187ms (ActiveRecord: 82.1ms)
+
+
+Started GET "/admin/dashboard/staff" for 127.0.0.1 at 2018-12-04 05:08:06 +0700
+Processing by AdminController#manage_staff as HTML
+  Rendering admin/manage_staff.html.erb within layouts/application
+  Rendered admin/_dashboard_header.html.erb (0.4ms)
+  [1m[36mStaff Load (0.3ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs"[0m
+  ↳ app/views/admin/manage_staff.html.erb:19
+  Rendered partial/_footer.html.erb (0.6ms)
+  Rendered admin/manage_staff.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/dashboard/change_password" for 127.0.0.1 at 2018-12-04 05:08:29 +0700
+Processing by AdminController#change_password as HTML
+  Rendering admin/change_password.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.5ms)
+  Rendered admin/change_password.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 44ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/dashboard/change_password" for 127.0.0.1 at 2018-12-04 05:08:32 +0700
+Processing by AdminController#change_password_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GJEwek5p4Spw/DVVcK9CkTYWq7pchWREnlnA+OZcMnZy9ranGHyElq43gBJUWIjpUhpweJivSnxZpODlU9m5EQ==", "admin"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  Rendering admin/change_password.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.5ms)
+  Rendered admin/change_password.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 52ms (Views: 48.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/dashboard/" for 127.0.0.1 at 2018-12-04 05:08:46 +0700
+Processing by AdminController#dashboard as HTML
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "staffs"[0m
+  ↳ app/controllers/admin_controller.rb:158
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/admin_controller.rb:159
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions"[0m
+  ↳ app/controllers/admin_controller.rb:160
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/_dashboard_header.html.erb (0.6ms)
+  Rendered partial/_footer.html.erb (0.5ms)
+  Rendered admin/dashboard.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 55ms (Views: 49.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin/dashboard/staff/" for 127.0.0.1 at 2018-12-04 05:09:32 +0700
+Processing by AdminController#manage_staff as HTML
+  Rendering admin/manage_staff.html.erb within layouts/application
+  Rendered admin/_dashboard_header.html.erb (0.5ms)
+  [1m[36mStaff Load (0.4ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs"[0m
+  ↳ app/views/admin/manage_staff.html.erb:19
+  Rendered partial/_footer.html.erb (0.8ms)
+  Rendered admin/manage_staff.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 67ms (Views: 64.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/dashboard/" for 127.0.0.1 at 2018-12-04 05:09:33 +0700
+Processing by AdminController#dashboard as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "staffs"[0m
+  ↳ app/controllers/admin_controller.rb:158
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/admin_controller.rb:159
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions"[0m
+  ↳ app/controllers/admin_controller.rb:160
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/_dashboard_header.html.erb (0.6ms)
+  Rendered partial/_footer.html.erb (0.8ms)
+  Rendered admin/dashboard.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 91ms (Views: 84.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/staff/" for 127.0.0.1 at 2018-12-04 05:09:40 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/staff"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/staff/login/" for 127.0.0.1 at 2018-12-04 05:09:45 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/login.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login/" for 127.0.0.1 at 2018-12-04 05:09:55 +0700
+Processing by AdminController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/dashboard
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-12-04 05:09:55 +0700
+Processing by AdminController#dashboard as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "staffs"[0m
+  ↳ app/controllers/admin_controller.rb:158
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/admin_controller.rb:159
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions"[0m
+  ↳ app/controllers/admin_controller.rb:160
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/_dashboard_header.html.erb (0.4ms)
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered admin/dashboard.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 42ms (Views: 38.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/logout/" for 127.0.0.1 at 2018-12-04 05:09:57 +0700
+Processing by AdminController#logout as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-12-04 05:09:57 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.4ms)
+  Rendered admin/login.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/login/" for 127.0.0.1 at 2018-12-04 05:09:58 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.4ms)
+  Rendered staff/login.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 62ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/login/?username=wisn&password=[FILTERED]" for 127.0.0.1 at 2018-12-04 05:10:01 +0700
+Processing by StaffController#login as HTML
+  Parameters: {"username"=>"wisn", "password"=>"[FILTERED]"}
+  Rendering staff/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.4ms)
+  Rendered staff/login.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 52ms (Views: 50.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/login/" for 127.0.0.1 at 2018-12-04 05:10:05 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.4ms)
+  Rendered staff/login.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login/" for 127.0.0.1 at 2018-12-04 05:18:09 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered admin/login.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 46ms (Views: 44.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-12-04 05:18:13 +0700
+Processing by AdminController#dashboard as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "staffs"[0m
+  ↳ app/controllers/admin_controller.rb:158
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/admin_controller.rb:159
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions"[0m
+  ↳ app/controllers/admin_controller.rb:160
+Completed 302 Found in 29ms (ActiveRecord: 12.8ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-12-04 05:18:13 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.5ms)
+  Rendered admin/login.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-12-04 05:19:58 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered admin/login.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-12-04 05:22:44 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered admin/login.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/login/" for 127.0.0.1 at 2018-12-04 05:22:47 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.6ms)
+  Rendered staff/login.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login/" for 127.0.0.1 at 2018-12-04 05:22:48 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered admin/login.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2018-12-04 05:22:51 +0700
+Processing by AdminController#login_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yNKoJrnVq2s7jqL+FoWj2gazMMRFsxraKcTJi5+AfZ09CdY8z9fTAK7OLyWjqIi35FV5YyM8ElANH3c2UmhLxQ==", "admin"=>{"username"=>"admin", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/admin_controller.rb:19
+Redirected to http://127.0.0.1:3000/admin/dashboard
+Completed 302 Found in 222ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-12-04 05:22:51 +0700
+Processing by AdminController#dashboard as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "staffs"[0m
+  ↳ app/controllers/admin_controller.rb:160
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/admin_controller.rb:161
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions"[0m
+  ↳ app/controllers/admin_controller.rb:162
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/_dashboard_header.html.erb (0.5ms)
+  Rendered partial/_footer.html.erb (0.4ms)
+  Rendered admin/dashboard.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 73ms (Views: 54.2ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/staff/" for 127.0.0.1 at 2018-12-04 05:22:54 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/staff"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/staff/login/" for 127.0.0.1 at 2018-12-04 05:22:56 +0700
+Processing by StaffController#login as HTML
+Redirected to http://127.0.0.1:3000/admin/dashboard
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-12-04 05:22:56 +0700
+Processing by AdminController#dashboard as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "staffs"[0m
+  ↳ app/controllers/admin_controller.rb:160
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/admin_controller.rb:161
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions"[0m
+  ↳ app/controllers/admin_controller.rb:162
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/_dashboard_header.html.erb (0.3ms)
+  Rendered partial/_footer.html.erb (0.4ms)
+  Rendered admin/dashboard.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 44ms (Views: 39.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin/logout/" for 127.0.0.1 at 2018-12-04 05:22:58 +0700
+Processing by AdminController#logout as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-12-04 05:22:58 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered admin/login.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/login/" for 127.0.0.1 at 2018-12-04 05:23:04 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.7ms)
+  Rendered staff/login.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/login/" for 127.0.0.1 at 2018-12-04 05:28:05 +0700
+  
+SyntaxError (/home/wisnu/Repos/github/wisn/siperan/app/controllers/staff_controller.rb:20: syntax error, unexpected ']', expecting ')'
+...ticate(login_paramsp'password'])
+...                              ^
+/home/wisnu/Repos/github/wisn/siperan/app/controllers/staff_controller.rb:60: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/staff_controller.rb:20: syntax error, unexpected ']', expecting ')'
+app/controllers/staff_controller.rb:60: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/staff/login/" for 127.0.0.1 at 2018-12-04 05:28:36 +0700
+  
+SyntaxError (/home/wisnu/Repos/github/wisn/siperan/app/controllers/staff_controller.rb:20: syntax error, unexpected ']', expecting ')'
+...ticate(login_paramsp'password'])
+...                              ^
+/home/wisnu/Repos/github/wisn/siperan/app/controllers/staff_controller.rb:60: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/staff_controller.rb:20: syntax error, unexpected ']', expecting ')'
+app/controllers/staff_controller.rb:60: syntax error, unexpected keyword_end, expecting end-of-input
+Started GET "/staff/login/" for 127.0.0.1 at 2018-12-04 05:28:48 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.4ms)
+  Rendered staff/login.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/login/" for 127.0.0.1 at 2018-12-04 05:30:37 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.4ms)
+  Rendered staff/login.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 49ms (Views: 48.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/staff/login" for 127.0.0.1 at 2018-12-04 05:30:39 +0700
+Processing by StaffController#login_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qOFMik+0GUzyfaXzpfT+qnPIxSbHcz3t0XHt0tRUueXtxoy9SkbIU6jAoGYhcu7YUfkiL+5TmZjVqwbBe3YuDg==", "staff"=>{"username"=>"", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 268ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `login_params' for #<StaffController:0x00007f982e489978>
+Did you mean?  @_params):
+  
+app/controllers/staff_controller.rb:17:in `login_validation'
+Started POST "/staff/login" for 127.0.0.1 at 2018-12-04 05:31:24 +0700
+Processing by StaffController#login_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qOFMik+0GUzyfaXzpfT+qnPIxSbHcz3t0XHt0tRUueXtxoy9SkbIU6jAoGYhcu7YUfkiL+5TmZjVqwbBe3YuDg==", "staff"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  Rendering staff/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/login.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 81ms (Views: 60.1ms | ActiveRecord: 7.2ms)
+
+
+Started POST "/staff/login" for 127.0.0.1 at 2018-12-04 05:31:29 +0700
+Processing by StaffController#login_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yryfjA8rjrXcqX6HJ5DwlWVeRuV4zXnrdWHkF9SlKpaPm1+7CtlfqoYUexKjFuDnR2+h7FHt3Z5xuw8Ee4e9fQ==", "staff"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  Rendering staff/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.5ms)
+  Rendered staff/login.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 43ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/login" for 127.0.0.1 at 2018-12-04 05:31:50 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/login.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/staff/login" for 127.0.0.1 at 2018-12-04 05:31:51 +0700
+Processing by StaffController#login_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iSZgtUSTlbOTEWjX6lNUFlFz69yrJFmK6bw9Dl1Q+nDMAaCCQWFErMmsbUJu1URkc0IM1YIE/f/tZtYd8nJtmw==", "staff"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  Rendering staff/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.4ms)
+  Rendered staff/login.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 40ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/login" for 127.0.0.1 at 2018-12-04 05:32:44 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.4ms)
+  Rendered staff/login.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 4673ms (Views: 4672.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/login" for 127.0.0.1 at 2018-12-04 05:33:17 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.4ms)
+  Rendered staff/login.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 3373ms (Views: 3372.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/staff/login" for 127.0.0.1 at 2018-12-04 05:33:24 +0700
+Processing by StaffController#login_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mqcBgY4fUG4rmrr77ZqPAXB+y55IamXoik4I0b2MagvfgMG2i+2BcXEnv25pHJ9zUk8sl2FKwZ2OlOPCEq794A==", "staff"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  Rendering staff/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.6ms)
+  Rendered staff/login.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/login" for 127.0.0.1 at 2018-12-04 05:34:06 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.8ms)
+  Rendered staff/login.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 3445ms (Views: 3443.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/login" for 127.0.0.1 at 2018-12-04 05:34:38 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.4ms)
+  Rendered staff/login.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/staff/login" for 127.0.0.1 at 2018-12-04 05:34:44 +0700
+Processing by StaffController#login_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GZ+TlDgDIEwoIGrNSmms8Hinhuqi0RH950jckVPSGwtcuFOjPfHxU3Kdb1jO77yCWpZh44vxtYjjkjeC/PCM4A==", "staff"=>{"username"=>"wisn", "password"=>"[FILTERED]"}}
+  [1m[36mStaff Load (0.6ms)[0m  [1m[34mSELECT  "staffs".* FROM "staffs" WHERE "staffs"."username" = $1 LIMIT $2[0m  [["username", "wisn"], ["LIMIT", 1]]
+  ↳ app/controllers/staff_controller.rb:19
+Redirected to 
+Completed 500 Internal Server Error in 458ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `staff_dashboard_url' for #<StaffController:0x00007f982d1bc5c0>
+Did you mean?  staff_root_url):
+  
+app/controllers/staff_controller.rb:22:in `login_validation'
+Started POST "/staff/login" for 127.0.0.1 at 2018-12-04 05:35:21 +0700
+Processing by StaffController#login_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GZ+TlDgDIEwoIGrNSmms8Hinhuqi0RH950jckVPSGwtcuFOjPfHxU3Kdb1jO77yCWpZh44vxtYjjkjeC/PCM4A==", "staff"=>{"username"=>"wisn", "password"=>"[FILTERED]"}}
+  [1m[36mStaff Load (0.5ms)[0m  [1m[34mSELECT  "staffs".* FROM "staffs" WHERE "staffs"."username" = $1 LIMIT $2[0m  [["username", "wisn"], ["LIMIT", 1]]
+  ↳ app/controllers/staff_controller.rb:19
+Redirected to 
+Completed 500 Internal Server Error in 567ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `staff_dashboard_url' for #<StaffController:0x00007f9827ea4748>
+Did you mean?  staff_dashbaord_url):
+  
+app/controllers/staff_controller.rb:22:in `login_validation'
+Started POST "/staff/login" for 127.0.0.1 at 2018-12-04 05:35:33 +0700
+Processing by StaffController#login_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GZ+TlDgDIEwoIGrNSmms8Hinhuqi0RH950jckVPSGwtcuFOjPfHxU3Kdb1jO77yCWpZh44vxtYjjkjeC/PCM4A==", "staff"=>{"username"=>"wisn", "password"=>"[FILTERED]"}}
+  [1m[36mStaff Load (0.4ms)[0m  [1m[34mSELECT  "staffs".* FROM "staffs" WHERE "staffs"."username" = $1 LIMIT $2[0m  [["username", "wisn"], ["LIMIT", 1]]
+  ↳ app/controllers/staff_controller.rb:19
+Redirected to http://127.0.0.1:3000/staff/dashboard
+Completed 302 Found in 224ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/staff/dashboard" for 127.0.0.1 at 2018-12-04 05:35:33 +0700
+  
+AbstractController::ActionNotFound (The action 'dashboard' could not be found for StaffController):
+  
+actionpack (5.2.1) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/staff/dashboard" for 127.0.0.1 at 2018-12-04 05:35:49 +0700
+Processing by StaffController#dashboard as HTML
+Completed 406 Not Acceptable in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (StaffController#dashboard is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/staff/dashboard" for 127.0.0.1 at 2018-12-04 05:36:25 +0700
+Processing by StaffController#dashboard as HTML
+  Rendering staff/dashboard.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.5ms)
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/dashboard.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/dashboard" for 127.0.0.1 at 2018-12-04 05:36:58 +0700
+Processing by StaffController#dashboard as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/staff_controller.rb:37
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions"[0m
+  ↳ app/controllers/staff_controller.rb:38
+  Rendering staff/dashboard.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.4ms)
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/dashboard.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 53ms (Views: 42.3ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/staff/dashboard" for 127.0.0.1 at 2018-12-04 05:37:53 +0700
+Processing by StaffController#dashboard as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "visitors"[0m
+  ↳ app/controllers/staff_controller.rb:37
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/staff_controller.rb:38
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions"[0m
+  ↳ app/controllers/staff_controller.rb:39
+  Rendering staff/dashboard.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.4ms)
+  Rendered partial/_footer.html.erb (0.6ms)
+  Rendered staff/dashboard.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 53ms (Views: 40.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/staff/dashboard" for 127.0.0.1 at 2018-12-04 05:38:19 +0700
+Processing by StaffController#dashboard as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "visitors"[0m
+  ↳ app/controllers/staff_controller.rb:37
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/staff_controller.rb:38
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions"[0m
+  ↳ app/controllers/staff_controller.rb:39
+  Rendering staff/dashboard.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.3ms)
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/dashboard.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 40ms (Views: 34.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/staff/dashboard" for 127.0.0.1 at 2018-12-04 05:39:01 +0700
+Processing by StaffController#dashboard as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "visitors"[0m
+  ↳ app/controllers/staff_controller.rb:37
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/staff_controller.rb:38
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions"[0m
+  ↳ app/controllers/staff_controller.rb:39
+  Rendering staff/dashboard.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.6ms)
+  Rendered partial/_footer.html.erb (0.4ms)
+  Rendered staff/dashboard.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 49ms (Views: 44.2ms | ActiveRecord: 1.1ms)
+
+
