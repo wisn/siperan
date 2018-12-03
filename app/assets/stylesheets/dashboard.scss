@@ -1,0 +1,133 @@
+// Place all the styles related to the Dashboard controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+header.dashboard {
+  background-color: #303f9f;
+  color: #fff;
+  padding: 4em 0;
+
+  .menu {
+    text-align: right;
+
+    a {
+      color: #fff;
+      display: inline-block;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+
+      &:not(:first-child) {
+        margin-left: 1em;
+      }
+    }
+  }
+}
+
+main.dashboard {
+  margin: 4em auto;
+  min-height: 70vh;
+
+  h1 {
+    font-size: 24pt;
+  }
+
+  .hr {
+    background-color: #222;
+    border-radius: .125em;
+    height: .125em;
+    margin-bottom: 8em;
+    width: 8em;
+  }
+
+  .cards {
+    .card {
+      background-color: transparent;
+      border: none;
+
+      h2 {
+        font-size: 72pt;
+        text-align: center;
+      }
+
+      p {
+        font-size: 24pt;
+        text-align: center;
+      }
+    }
+  }
+
+  .menu {
+    text-align: right;
+
+    a.button {
+      border: .125em solid #303f9f;
+      border-radius: .25em;
+      color: #303f9f;
+      font-weight: 900;
+      display: inline-block;
+      padding: .25em 1em;
+
+      &:hover {
+        background-color: #303f9f;
+        color: #efefef;
+        text-decoration: none;
+      }
+    }
+  }
+
+  section.form {
+    margin: 0 auto 10em;
+    width: 400px;
+
+    input:not([type=submit]) {
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid #222;
+      font-size: 14pt;
+      margin-bottom: 2em;
+      width: 100%;
+
+      &:not(:focus) {
+        border-bottom: 2px solid #999;
+      }
+    }
+
+    .field_with_errors {
+      width: 100%;
+    }
+
+    input[type=submit] {
+      background-color: #303f9f;
+      border: 2px solid #303f9f;
+      color: #fff;
+      display: block;
+      margin: 0 auto;
+      padding: .5em 2em;
+
+      &:hover {
+        background-color: transparent;
+        color: #303f9f;
+        cursor: pointer;
+      }
+    }
+
+    .error-message {
+      margin: 4em 0 0;
+
+      h2 {
+        font-size: 16pt;
+      }
+    }
+  }
+
+  table.table {
+    thead.thead-dark th {
+      background-color: #303f9f;
+      border-color: #303f9f;
+    }
+  }
+}
+

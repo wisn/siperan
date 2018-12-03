@@ -18,7 +18,7 @@
           <%= fa_icon 'user-circle' %>
         </div>
         <div class="col-sm-10">
-          <input type="text" name="username" placeholder="Nama Pengguna" autofocus>
+          <input type="text" name="username" placeholder="Username" autofocus>
         </div>
       </div>
       <div class="row">
@@ -26,7 +26,7 @@
           <%= fa_icon 'key', class: 'custom-key' %>
         </div>
         <div class="col-sm-10">
-          <input type="password" name="password" placeholder="Kata Sandi">
+          <input type="password" name="password" placeholder="Password">
         </div>
       </div>
       <div class="row">
@@ -34,50 +34,28 @@
         <div class="col-sm-10">
           <label>
             <input type="checkbox" name="remember" value="true">
-            <span>Biarkan saya tetap masuk</span>
+            <span>Let me logged in for a while</span>
           </label>
         </div>
       </div>
       <div class="row">
-        <input class="dark-primary-color-bg" type="submit" value="Masuk">
+        <input class="dark-primary-color-bg" type="submit" value="Login">
       </div>
     </form>
 
     <div class="links">
       <div class="forgot-password">
-        Lupa kata sandi?
-        <a href="/staff/recover/">Pulihkan</a> sekarang!
+        Forgot password?
+        <a href="javascript:alert('Please ask your admin to recover your account!');">Recover</a> now!
       </div>
       <div class="login-as-admin">
-        Anda pengurus?
-        <a href="/admin/login/">Masuk sebagai pengurus</a> saja.
+        Are you an admin?
+        <a href="/admin/login/">Login as admin</a> instead.
       </div>
     </div>
   </div>
 </main>
-<footer class="single-page">
-  <div class="container">
-    <div class="row copyright">
-      <div class="col-md-4">
-        Hak cipta &copy; 2018,
-        <a href="/developer/" target="_blank" rel="noopener noreferrer">Pengembang SIPERAN</a>.<br>
-        Lisensi penggunaan di bawah
-        <a href="/license/" target="_blank" rel="noopener noreferrer">The MIT License</a>.
-      </div>
-      <div class="col-md-8">
-        <div class="navigation">
-          <a href="/guide/" target="_blank" rel="noopener noreferrer">
-            Panduan Penggunaan
-          </a>
-          <a href="https://github.com/wisn/siperan/issues/" target="_blank" rel="noopener noreferrer">
-            Laporkan Masalah
-          </a>
-          <a href="https://github.com/wisn/siperan/" target="_blank" rel="noopener noreferrer">
-            Lihat Kode Sumber
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
 
+<footer class="single-page">
+  <%= render 'partial/footer' %>
+</footer>

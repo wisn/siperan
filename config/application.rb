@@ -17,6 +17,6 @@ module Siperan
     # the framework and any gems in your application.
 
     # Configure default locales
-    config.i18n.default_locale = :id
+    config.i18n.default_locale = :en
   end
 end

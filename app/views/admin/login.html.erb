@@ -12,13 +12,13 @@
       <%= t 'admin.login.as-admin' %>
     </h2>
 
-    <form>
+    <%= form_with scope: :admin, url: :admin_login_validation, local: true do |form| %>
       <div class="row">
         <div class="col-sm-2">
           <%= fa_icon 'user-circle' %>
         </div>
         <div class="col-sm-10">
-          <input type="text" name="username" placeholder="Nama Pengguna" autofocus>
+          <%= form.text_field :username, placeholder: 'Username', autofocus: 'true' %>
         </div>
       </div>
       <div class="row">
@@ -26,7 +26,7 @@
           <%= fa_icon 'key', class: 'custom-key' %>
         </div>
         <div class="col-sm-10">
-          <input type="password" name="password" placeholder="Kata Sandi">
+          <%= form.password_field :password, placeholder: 'Password', autofocus: 'true' %>
         </div>
       </div>
       <div class="row">
@@ -34,50 +34,40 @@
         <div class="col-sm-10">
           <label>
             <input type="checkbox" name="remember" value="true">
-            <span>Biarkan saya tetap masuk</span>
+            <span>Let me logged in for a while</span>
           </label>
         </div>
       </div>
       <div class="row">
-        <input class="dark-primary-color-bg" type="submit" value="Masuk">
+        <input class="dark-primary-color-bg" type="submit" value="Login">
       </div>
-    </form>
+
+      <% if @admin and @admin.errors.any? %>
+        <div class="error-message">
+          <h2>Error occurred:</h2>
+          <ul>
+            <% @admin.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    <% end %>
 
     <div class="links">
       <div class="forgot-password">
-        Lupa kata sandi?
-        <a href="/admin/recover/">Pulihkan</a> sekarang!
+        Forgot password?
+        <a href="/admin/recover/">Recover</a> now!
       </div>
       <div class="login-as-admin">
-        Anda staf?
-        <a href="/staff/login/">Masuk sebagai staf</a> saja.
+        Are you a staff?
+        <a href="/staff/login/">Login as a staff</a> instead.
       </div>
     </div>
   </div>
 </main>
+
 <footer class="single-page">
-  <div class="container">
-    <div class="row copyright">
-      <div class="col-md-4">
-        Hak cipta &copy; 2018,
-        <a href="/developer/" target="_blank" rel="noopener noreferrer">Pengembang SIPERAN</a>.<br>
-        Lisensi penggunaan di bawah
-        <a href="/license/" target="_blank" rel="noopener noreferrer">The MIT License</a>.
-      </div>
-      <div class="col-md-8">
-        <div class="navigation">
-          <a href="/guide/" target="_blank" rel="noopener noreferrer">
-            Panduan Penggunaan
-          </a>
-          <a href="https://github.com/wisn/siperan/issues/" target="_blank" rel="noopener noreferrer">
-            Laporkan Masalah
-          </a>
-          <a href="https://github.com/wisn/siperan/" target="_blank" rel="noopener noreferrer">
-            Lihat Kode Sumber
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+  <%= render 'partial/footer' %>
 </footer>
 

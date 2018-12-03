@@ -1,0 +1,21 @@
+<header class="dashboard">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h1>SIPERAN</h1>
+        <p>
+          Welcome to your dashboard,
+          <strong><%= session[:user_data]['username'] %></strong>!
+        </p>
+        <div class="hr"></div>
+      </div>
+      <div class="col-sm-6 menu">
+        <a href="/admin/dashboard/">Dashboard</a>
+        <a href="/admin/dashboard/staff/">Manage Staff</a>
+        <a href="/admin/dashboard/change_password">Change Password</a>
+        <a href="/admin/logout/">Logout</a>
+      </div>
+    </div>
+  </div>
+</header>
+

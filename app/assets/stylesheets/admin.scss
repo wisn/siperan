@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.admin-login {
+.admin-login, .admin-recover-page {
   .container {
     margin: 8em auto 6em;
   }
@@ -97,10 +97,30 @@
         cursor: pointer;
       }
     }
+
+    .error-message {
+      margin: 4em 0 0;
+
+      h2 {
+        font-size: 16pt;
+      }
+    }
   }
 
   .links {
     text-align: center;
+  }
+}
+
+.admin-recover-page {
+  form {
+    margin: 8em auto;
+
+    h4.question {
+      font-size: 14pt;
+      font-weight: 900;
+      text-align: center;
+    }
   }
 }
 

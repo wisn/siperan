@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  staff_username: MyString
+  visitor_username: MyString
+  book_isbn: MyString
+  is_borrowing: false
+
+two:
+  staff_username: MyString
+  visitor_username: MyString
+  book_isbn: MyString
+  is_borrowing: false

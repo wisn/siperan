@@ -30,4 +30,15 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  app:
+    title: 'SIPERAN'
+    version: '1.0.0'
+  admin:
+    login:
+      title: 'Login to SIPERAN'
+      as-admin: 'login as an admin'
+  staff:
+    login:
+      title: 'Login to SIPERAN'
+      as-staff: 'login as a staff'
+

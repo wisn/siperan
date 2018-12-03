@@ -1,0 +1,47 @@
+<% content_for :title, 'Manage Staff | SIPERAN' %>
+
+<%= render 'dashboard_header' %>
+
+<main class="dashboard">
+  <div class="container">
+    <div align="center">
+      <h1>Updating Staff</h1>
+      <div class="hr"></div>
+    </div>
+    <section class="form">
+      <%= form_with scope: :staff, url: :admin_edit_staff_validation, local: true do |form| %>
+        <div class="row">
+          <%= form.text_field :fullname, placeholder: 'Fullname' %>
+        </div>
+        <div class="row">
+          <%= form.text_field :username, placeholder: 'Username', disabled: true %>
+        </div>
+        <div class="row">
+          <%= form.password_field :password, placeholder: 'Password' %>
+        </div>
+        <div class="row">
+          <%= form.password_field :password_confirmation, placeholder: 'Password Confirmation' %>
+        </div>
+        <div class="row">
+          <input class="dark-primary-color-bg" type="submit" value="Update Staff">
+        </div>
+
+        <% if @staff and @staff.errors.any? %>
+          <div class="error-message">
+            <h2>Error occurred:</h2>
+            <ul>
+              <% @staff.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+      <% end%>
+    </section>
+  </div>
+</main>
+
+<footer class="single-page">
+  <%= render 'partial/footer' %>
+</footer>
+

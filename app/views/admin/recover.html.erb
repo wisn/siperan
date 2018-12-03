@@ -1,0 +1,56 @@
+<% content_for :title, 'Recover Admin Account' %>
+
+<main class="admin-recover-page">
+  <div class="container">
+    <h1 class="dark-primary-color-fg title">
+      <%= t 'app.title' %>
+      <sup class="version">
+        v<%= t 'app.version' %>
+      </sup>
+    </h1>
+    <h2 class="subtitle">
+      recovering admin account
+    </h2>
+
+    <%= form_with scope: :admin, url: :admin_recover_root_post, local: true do |form| %>
+      <div class="row">
+        <div class="col-sm-2">
+          <%= fa_icon 'user-circle' %>
+        </div>
+        <div class="col-sm-10">
+          <%= form.text_field :username, placeholder: 'Username', autofocus: 'true' %>
+        </div>
+      </div>
+      <div class="row">
+        <input class="dark-primary-color-bg" type="submit" value="Recover">
+      </div>
+
+      <% if @admin and @admin.errors.any? %>
+        <div class="error-message">
+          <h2>Error occurred:</h2>
+          <ul>
+            <% @admin.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    <% end %>
+
+    <div class="links">
+      <div class="forgot-password">
+        Suddenly remember your password?
+        <a href="/admin/login/">Login</a> now!
+      </div>
+      <div class="login-as-admin">
+        Are you a staff?
+        <a href="/staff/login/">Login as staff</a> instead.
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="single-page">
+  <%= render 'partial/footer' %>
+</footer>
+

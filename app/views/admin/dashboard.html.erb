@@ -1,2 +1,35 @@
-Hohohihe
+<% content_for :title, 'Admin Dashboard | SIPERAN' %>
+
+<%= render 'dashboard_header' %>
+
+<main class="dashboard">
+  <div class="container">
+    <h1>Overview Statistics</h1>
+    <div class="hr"></div>
+    <div class="row cards">
+      <div class="col-sm-4">
+        <div class="card">
+          <h2><%= @staff_total %></h2>
+          <p>Staff has been added</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <h2><%= @books_total %></h2>
+          <p>Books has been added</p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <h2><%= @transactions_total %></h2>
+          <p>Transactions recorded</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="single-page">
+  <%= render 'partial/footer' %>
+</footer>
 
