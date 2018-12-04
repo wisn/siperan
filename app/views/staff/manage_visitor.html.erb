@@ -1,0 +1,58 @@
+<% content_for :title, 'Manage Visitor | SIPERAN' %>
+
+<%= render 'dashboard_header' %>
+
+<main class="dashboard">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <h1>Manage Visitor</h1>
+        <div class="hr"></div>
+      </div>
+      <div class="col-sm-4 menu">
+        <a class="button" href="/staff/dashboard/new_visitor">
+          Add a New Visitor
+        </a>
+      </div>
+    </div>
+    <section class="list">
+      <% if @visitor.present? %>
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Fullname</th>
+              <th scope="col">Username</th>
+              <th scope="col">Age</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <% i = 0 %>
+          <tbody>
+            <% @visitor.each do |v| %>
+              <tr>
+                <th scope="row"><%= i += 1 %></th>
+                <td><%= v.fullname %></td>
+                <td><%= v.username %></td>
+                <td><%= v.age %></td>
+                <td>
+                  <a class="btn btn-sm btn-primary" href="/staff/dashboard/edit_visitor/<%= v.username %>/">Edit</a>
+                  <a class="btn btn-sm btn-danger" href="/staff/dashboard/remove_visitor/<%= v.username %>/">Remove</a>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <div align="center" class="no-data">
+          Currently, there is no visitor. Consider to add a new one.
+        </div>
+      <% end %>
+    </section>
+  </div>
+</main>
+
+<footer class="single-page">
+  <%= render 'partial/footer' %>
+</footer>
+

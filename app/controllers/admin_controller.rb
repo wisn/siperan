@@ -207,7 +207,7 @@ class AdminController < ApplicationController
         redirect_to :admin_manage_staff_root
       else
         @staff = staff
-        render 'edit_staff', params: { username: username }
+        render 'edit_staff'
       end
     else
       redirect_to :admin_manage_staff_root

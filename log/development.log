@@ -9957,3 +9957,686 @@ Processing by StaffController#dashboard as HTML
 Completed 200 OK in 49ms (Views: 44.2ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/staff/dashboard" for 127.0.0.1 at 2018-12-04 06:17:42 +0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by StaffController#dashboard as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "visitors"[0m
+  ↳ app/controllers/staff_controller.rb:37
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/staff_controller.rb:38
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions"[0m
+  ↳ app/controllers/staff_controller.rb:39
+  Rendering staff/dashboard.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.4ms)
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/dashboard.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 7923ms (Views: 7896.8ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/staff/logout/" for 127.0.0.1 at 2018-12-04 06:17:57 +0700
+Processing by StaffController#logout as HTML
+Redirected to http://127.0.0.1:3000/staff/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/login" for 127.0.0.1 at 2018-12-04 06:17:57 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.4ms)
+  Rendered staff/login.html.erb within layouts/application (115.0ms)
+Completed 200 OK in 150ms (Views: 147.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/staff/login" for 127.0.0.1 at 2018-12-04 06:18:01 +0700
+Processing by StaffController#login_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+VnTr/dU39WnwK5Y2EU8xnSf/ZCGDgegdfa50ZUrGF0ZVgRfkVNQB1P/3nMx9DO9WUqn1oBdfkrpIbfeWooSNQ==", "staff"=>{"username"=>"wisn", "password"=>"[FILTERED]"}}
+  [1m[36mStaff Load (0.4ms)[0m  [1m[34mSELECT  "staffs".* FROM "staffs" WHERE "staffs"."username" = $1 LIMIT $2[0m  [["username", "wisn"], ["LIMIT", 1]]
+  ↳ app/controllers/staff_controller.rb:19
+Redirected to http://127.0.0.1:3000/staff/dashboard
+Completed 302 Found in 227ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/staff/dashboard" for 127.0.0.1 at 2018-12-04 06:18:01 +0700
+Processing by StaffController#dashboard as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "visitors"[0m
+  ↳ app/controllers/staff_controller.rb:37
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/staff_controller.rb:38
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions"[0m
+  ↳ app/controllers/staff_controller.rb:39
+  Rendering staff/dashboard.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.4ms)
+  Rendered partial/_footer.html.erb (0.4ms)
+  Rendered staff/dashboard.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 45ms (Views: 40.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/staff/dashboard" for 127.0.0.1 at 2018-12-04 06:18:41 +0700
+Processing by StaffController#dashboard as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "visitors"[0m
+  ↳ app/controllers/staff_controller.rb:37
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/staff_controller.rb:38
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions"[0m
+  ↳ app/controllers/staff_controller.rb:39
+  Rendering staff/dashboard.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.5ms)
+  Rendered partial/_footer.html.erb (0.7ms)
+  Rendered staff/dashboard.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 43ms (Views: 38.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/staff/dashboard" for 127.0.0.1 at 2018-12-04 06:18:47 +0700
+Processing by StaffController#dashboard as HTML
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "visitors"[0m
+  ↳ app/controllers/staff_controller.rb:37
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/staff_controller.rb:38
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions"[0m
+  ↳ app/controllers/staff_controller.rb:39
+  Rendering staff/dashboard.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.4ms)
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/dashboard.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 47ms (Views: 42.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/staff/dashboard" for 127.0.0.1 at 2018-12-04 06:19:18 +0700
+Processing by StaffController#dashboard as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "visitors"[0m
+  ↳ app/controllers/staff_controller.rb:37
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/staff_controller.rb:38
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions"[0m
+  ↳ app/controllers/staff_controller.rb:39
+  Rendering staff/dashboard.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.4ms)
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/dashboard.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 44ms (Views: 38.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/staff/dashboard" for 127.0.0.1 at 2018-12-04 06:22:08 +0700
+Processing by StaffController#dashboard as HTML
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "visitors"[0m
+  ↳ app/controllers/staff_controller.rb:37
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/staff_controller.rb:38
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions"[0m
+  ↳ app/controllers/staff_controller.rb:39
+  Rendering staff/dashboard.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.4ms)
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/dashboard.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 51ms (Views: 45.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/staff/dashboard/change_password" for 127.0.0.1 at 2018-12-04 06:53:59 +0700
+Processing by StaffController#change_password as HTML
+  Rendering staff/change_password.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.6ms)
+  Rendered staff/change_password.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 50ms (Views: 48.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/staff/dashboard/change_password" for 127.0.0.1 at 2018-12-04 06:54:04 +0700
+Processing by StaffController#change_password_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ErXdEx3YkmI1KI99I7P6/IKKQlTDeoO3XpA3Leo1DfKF6m0GHpqVhmB1mV+s7EHuWrDZXTRJgin+h3bOIfcC5w==", "staff"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mStaff Load (0.6ms)[0m  [1m[34mSELECT  "staffs".* FROM "staffs" WHERE "staffs"."username" = $1 LIMIT $2[0m  [["username", "wisn"], ["LIMIT", 1]]
+  ↳ app/controllers/staff_controller.rb:60
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/staff_controller.rb:63
+  [1m[36mStaff Update (0.7ms)[0m  [1m[33mUPDATE "staffs" SET "password_digest" = $1, "updated_at" = $2 WHERE "staffs"."id" = $3[0m  [["password_digest", "$2a$10$wSqdIL4dOZld5ZhwPUMCReWn43PujU.BSWzPVEAFDEhwCSJnHKSo2"], ["updated_at", "2018-12-03 23:54:04.877310"], ["id", 3]]
+  ↳ app/controllers/staff_controller.rb:63
+  [1m[35m (27.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/staff_controller.rb:63
+Redirected to http://127.0.0.1:3000/staff/login
+Completed 302 Found in 267ms (ActiveRecord: 36.5ms)
+
+
+Started GET "/staff/login" for 127.0.0.1 at 2018-12-04 06:54:04 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/login.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 51ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/staff/login" for 127.0.0.1 at 2018-12-04 06:54:08 +0700
+Processing by StaffController#login_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hzW28AEKjOz2ApRXGkk5EKJq2Uau9GDLFhHLXSrBKk3CEnbHBPhd86y/kcKezyligFs+T4fUxL4SyyBOheO9pg==", "staff"=>{"username"=>"wisn", "password"=>"[FILTERED]"}}
+  [1m[36mStaff Load (0.5ms)[0m  [1m[34mSELECT  "staffs".* FROM "staffs" WHERE "staffs"."username" = $1 LIMIT $2[0m  [["username", "wisn"], ["LIMIT", 1]]
+  ↳ app/controllers/staff_controller.rb:19
+Redirected to http://127.0.0.1:3000/staff/dashboard
+Completed 302 Found in 203ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/staff/dashboard" for 127.0.0.1 at 2018-12-04 06:54:08 +0700
+Processing by StaffController#dashboard as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "visitors"[0m
+  ↳ app/controllers/staff_controller.rb:37
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/staff_controller.rb:38
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions"[0m
+  ↳ app/controllers/staff_controller.rb:39
+  Rendering staff/dashboard.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.4ms)
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/dashboard.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 59ms (Views: 43.7ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/staff/dashboard/visitor/" for 127.0.0.1 at 2018-12-04 06:57:15 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/staff/dashboard/visitor"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/staff/dashboard/visitor/" for 127.0.0.1 at 2018-12-04 06:57:25 +0700
+Processing by StaffController#manage_visitor as HTML
+  Rendering staff/manage_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.3ms)
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/manage_visitor.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 170ms (Views: 168.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/dashboard/visitor/" for 127.0.0.1 at 2018-12-04 06:59:41 +0700
+Processing by StaffController#manage_visitor as HTML
+  Rendering staff/manage_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.3ms)
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/manage_visitor.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/dashboard/new_visitor" for 127.0.0.1 at 2018-12-04 07:00:34 +0700
+Processing by StaffController#new_visitor as HTML
+  Rendering staff/new_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.4ms)
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/new_visitor.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/dashboard/new_visitor" for 127.0.0.1 at 2018-12-04 07:01:52 +0700
+Processing by StaffController#new_visitor as HTML
+  Rendering staff/new_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.3ms)
+  Rendered staff/new_visitor.html.erb within layouts/application (237.1ms)
+Completed 500 Internal Server Error in 240ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `staff_new_visitor_validation_path' for #<#<Class:0x00007f28d7ae0c48>:0x00007f28d79bb930>
+Did you mean?  staff_new_visitor_path):
+     9:       <div class="hr"></div>
+    10:     </div>
+    11:     <section class="form">
+    12:       <%= form_with scope: :visitor, url: :staff_new_visitor_validation, local: true do |form| %>
+    13:         <div class="row">
+    14:           <%= form.text_field :fullname, placeholder: 'Fullname' %>
+    15:         </div>
+  
+app/views/staff/new_visitor.html.erb:12:in `_app_views_staff_new_visitor_html_erb___2669220127841831337_69906696364360'
+Started GET "/staff/dashboard/new_visitor" for 127.0.0.1 at 2018-12-04 07:02:18 +0700
+Processing by StaffController#new_visitor as HTML
+  Rendering staff/new_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.3ms)
+  Rendered partial/_footer.html.erb (0.4ms)
+  Rendered staff/new_visitor.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 37ms (Views: 36.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/staff/dashboard/new_visitor" for 127.0.0.1 at 2018-12-04 07:06:18 +0700
+Processing by StaffController#new_visitor_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ngutEKWTS/NyIlm25PImEb9oJQrBjG70Q23J9zWzPSzX+6DR2ScMJd1jPNfFdjqZMxHnQImlc7V11w0c/RbHw==", "visitor"=>{"fullname"=>"", "username"=>"", "age"=>""}}
+Completed 500 Internal Server Error in 303ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `new_visitor_params' for #<StaffController:0x00007f28d72c2d18>
+Did you mean?  new_visitor):
+  
+app/controllers/staff_controller.rb:78:in `new_visitor_validation'
+Started POST "/staff/dashboard/new_visitor" for 127.0.0.1 at 2018-12-04 07:06:47 +0700
+Processing by StaffController#new_visitor_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ngutEKWTS/NyIlm25PImEb9oJQrBjG70Q23J9zWzPSzX+6DR2ScMJd1jPNfFdjqZMxHnQImlc7V11w0c/RbHw==", "visitor"=>{"fullname"=>"", "username"=>"", "age"=>""}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/staff_controller.rb:79
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/staff_controller.rb:79
+  Rendering staff/new_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.3ms)
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/new_visitor.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 65ms (Views: 43.6ms | ActiveRecord: 6.4ms)
+
+
+Started POST "/staff/dashboard/new_visitor" for 127.0.0.1 at 2018-12-04 07:06:59 +0700
+Processing by StaffController#new_visitor_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h49kNv7LSiKjfChsCMkWjz4+Mfi/x6kKskJ1eJH81FXCqKQB+zmbPfnBLfmMTwb9HA/W8ZbnDX+2mJ5rPt5Dvg==", "visitor"=>{"fullname"=>"Pungki Nurhuda", "username"=>"pungki", "age"=>"20"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/staff_controller.rb:79
+  [1m[36mVisitor Create (86.7ms)[0m  [1m[32mINSERT INTO "visitors" ("fullname", "username", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fullname", "Pungki Nurhuda"], ["username", "pungki"], ["age", 20], ["created_at", "2018-12-04 00:06:59.866089"], ["updated_at", "2018-12-04 00:06:59.866089"]]
+  ↳ app/controllers/staff_controller.rb:79
+  [1m[35m (95.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/staff_controller.rb:79
+Redirected to 
+Completed 500 Internal Server Error in 485ms (ActiveRecord: 182.8ms)
+
+
+  
+NoMethodError (undefined method `staff_manage_visitor_url' for #<StaffController:0x00007f28d6229290>
+Did you mean?  satff_manage_visitor_url
+               staff_new_visitor_url
+               satff_manage_visitor_path):
+  
+app/controllers/staff_controller.rb:80:in `new_visitor_validation'
+Started GET "/staff/dashboard/" for 127.0.0.1 at 2018-12-04 07:07:32 +0700
+Processing by StaffController#dashboard as HTML
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "visitors"[0m
+  ↳ app/controllers/staff_controller.rb:37
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/staff_controller.rb:38
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions"[0m
+  ↳ app/controllers/staff_controller.rb:39
+  Rendering staff/dashboard.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.4ms)
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/dashboard.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 51ms (Views: 36.5ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/staff/dashboard/visitor/" for 127.0.0.1 at 2018-12-04 07:07:34 +0700
+Processing by StaffController#manage_visitor as HTML
+  Rendering staff/manage_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.5ms)
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/manage_visitor.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/dashboard/visitor/" for 127.0.0.1 at 2018-12-04 07:07:58 +0700
+Processing by StaffController#manage_visitor as HTML
+  Rendering staff/manage_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.4ms)
+  Rendered partial/_footer.html.erb (0.4ms)
+  Rendered staff/manage_visitor.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/dashboard/visitor/" for 127.0.0.1 at 2018-12-04 07:08:22 +0700
+Processing by StaffController#manage_visitor as HTML
+  Rendering staff/manage_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.4ms)
+  [1m[36mVisitor Load (0.3ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors"[0m
+  ↳ app/views/staff/manage_visitor.html.erb:19
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/manage_visitor.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 59ms (Views: 50.4ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/staff/dashboard/new_visitor" for 127.0.0.1 at 2018-12-04 07:08:58 +0700
+Processing by StaffController#new_visitor as HTML
+  Rendering staff/new_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.6ms)
+  Rendered partial/_footer.html.erb (0.5ms)
+  Rendered staff/new_visitor.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 50ms (Views: 47.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/staff/dashboard/new_visitor" for 127.0.0.1 at 2018-12-04 07:09:09 +0700
+Processing by StaffController#new_visitor_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6d7MMgiWPsV5ooZ9n+e2lr711LOBfqyipFORCksTdjJovlo6sBReVfW8m4/iX+qlces/B5VRROa+c8ifnaXkhg==", "visitor"=>{"fullname"=>"Irsyad Fauzan", "username"=>"irsyad", "age"=>"20"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/staff_controller.rb:85
+  [1m[36mVisitor Create (0.7ms)[0m  [1m[32mINSERT INTO "visitors" ("fullname", "username", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["fullname", "Irsyad Fauzan"], ["username", "irsyad"], ["age", 20], ["created_at", "2018-12-04 00:09:09.395910"], ["updated_at", "2018-12-04 00:09:09.395910"]]
+  ↳ app/controllers/staff_controller.rb:85
+  [1m[35m (79.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/staff_controller.rb:85
+Redirected to http://127.0.0.1:3000/staff/dashboard/visitor
+Completed 302 Found in 85ms (ActiveRecord: 80.4ms)
+
+
+Started GET "/staff/dashboard/visitor" for 127.0.0.1 at 2018-12-04 07:09:09 +0700
+Processing by StaffController#manage_visitor as HTML
+  Rendering staff/manage_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.7ms)
+  [1m[36mVisitor Load (0.4ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors"[0m
+  ↳ app/views/staff/manage_visitor.html.erb:19
+  Rendered partial/_footer.html.erb (0.6ms)
+  Rendered staff/manage_visitor.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 62ms (Views: 59.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/staff/dashboard/edit_visitor/pungki/" for 127.0.0.1 at 2018-12-04 07:12:06 +0700
+Processing by StaffController#edit_visitor as HTML
+  Parameters: {"username"=>"pungki"}
+  Rendering staff/edit_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.4ms)
+  Rendered staff/edit_visitor.html.erb within layouts/application (274.3ms)
+Completed 500 Internal Server Error in 277ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `staff_edit_visitor_validation_path' for #<#<Class:0x00007f28d7d8d860>:0x00007f28d7da7da0>
+Did you mean?  staff_new_visitor_validation_path
+               staff_new_visitor_validation_url):
+     9:       <div class="hr"></div>
+    10:     </div>
+    11:     <section class="form">
+    12:       <%= form_with scope: :visitor, url: :staff_edit_visitor_validation, local: true do |form| %>
+    13:         <div class="row">
+    14:           <%= form.text_field :fullname, placeholder: 'Fullname' %>
+    15:         </div>
+  
+app/views/staff/edit_visitor.html.erb:12:in `_app_views_staff_edit_visitor_html_erb___2585848669804580362_69906698367260'
+Started GET "/staff/dashboard/edit_visitor/pungki/" for 127.0.0.1 at 2018-12-04 07:12:38 +0700
+Processing by StaffController#edit_visitor as HTML
+  Parameters: {"username"=>"pungki"}
+  Rendering staff/edit_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.3ms)
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/edit_visitor.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/dashboard/edit_visitor/pungki/" for 127.0.0.1 at 2018-12-04 07:13:34 +0700
+Processing by StaffController#edit_visitor as HTML
+  Parameters: {"username"=>"pungki"}
+  [1m[36mVisitor Load (0.3ms)[0m  [1m[34mSELECT  "visitors".* FROM "visitors" WHERE "visitors"."username" = $1 LIMIT $2[0m  [["username", "pungki"], ["LIMIT", 1]]
+  ↳ app/controllers/staff_controller.rb:95
+  Rendering staff/edit_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.4ms)
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/edit_visitor.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 52ms (Views: 34.5ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/staff/dashboard/edit_visitor/pungki/" for 127.0.0.1 at 2018-12-04 07:16:12 +0700
+Processing by StaffController#edit_visitor as HTML
+  Parameters: {"username"=>"pungki"}
+  [1m[36mVisitor Load (0.3ms)[0m  [1m[34mSELECT  "visitors".* FROM "visitors" WHERE "visitors"."username" = $1 LIMIT $2[0m  [["username", "pungki"], ["LIMIT", 1]]
+  ↳ app/controllers/staff_controller.rb:95
+  Rendering staff/edit_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.4ms)
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/edit_visitor.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 43ms (Views: 34.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/staff/dashboard/edit_visitor/pungki" for 127.0.0.1 at 2018-12-04 07:16:13 +0700
+Processing by StaffController#edit_visitor_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+Gb3VMUNc8t4UvLAdzEZuW7yTM5T2BfOuhns6wC8LMS9QTdjwP+i1CLv91XztwnLTMOrx3r4s7u+wwf4r567Lw==", "visitor"=>{"fullname"=>"Pungki Nurhuda", "age"=>"20"}, "username"=>"pungki"}
+  [1m[36mVisitor Load (0.3ms)[0m  [1m[34mSELECT  "visitors".* FROM "visitors" WHERE "visitors"."username" = $1 LIMIT $2[0m  [["username", "pungki"], ["LIMIT", 1]]
+  ↳ app/controllers/staff_controller.rb:105
+Completed 500 Internal Server Error in 275ms (ActiveRecord: 0.5ms)
+
+
+  
+NameError (undefined local variable or method `edit_visitor_params' for #<StaffController:0x00007f28d511da00>
+Did you mean?  new_visitor_params):
+  
+app/controllers/staff_controller.rb:107:in `edit_visitor_validation'
+Started POST "/staff/dashboard/edit_visitor/pungki" for 127.0.0.1 at 2018-12-04 07:18:18 +0700
+Processing by StaffController#edit_visitor_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+Gb3VMUNc8t4UvLAdzEZuW7yTM5T2BfOuhns6wC8LMS9QTdjwP+i1CLv91XztwnLTMOrx3r4s7u+wwf4r567Lw==", "visitor"=>{"fullname"=>"Pungki Nurhuda", "age"=>"20"}, "username"=>"pungki"}
+  [1m[36mVisitor Load (0.4ms)[0m  [1m[34mSELECT  "visitors".* FROM "visitors" WHERE "visitors"."username" = $1 LIMIT $2[0m  [["username", "pungki"], ["LIMIT", 1]]
+  ↳ app/controllers/staff_controller.rb:105
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/staff_controller.rb:111
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/staff_controller.rb:111
+Redirected to http://127.0.0.1:3000/staff/dashboard/visitor
+Completed 302 Found in 13ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/staff/dashboard/visitor" for 127.0.0.1 at 2018-12-04 07:18:18 +0700
+Processing by StaffController#manage_visitor as HTML
+  Rendering staff/manage_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.3ms)
+  [1m[36mVisitor Load (0.4ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors"[0m
+  ↳ app/views/staff/manage_visitor.html.erb:19
+  Rendered partial/_footer.html.erb (0.5ms)
+  Rendered staff/manage_visitor.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/staff/dashboard/edit_visitor/pungki/" for 127.0.0.1 at 2018-12-04 07:18:21 +0700
+Processing by StaffController#edit_visitor as HTML
+  Parameters: {"username"=>"pungki"}
+  [1m[36mVisitor Load (0.5ms)[0m  [1m[34mSELECT  "visitors".* FROM "visitors" WHERE "visitors"."username" = $1 LIMIT $2[0m  [["username", "pungki"], ["LIMIT", 1]]
+  ↳ app/controllers/staff_controller.rb:95
+  Rendering staff/edit_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.7ms)
+  Rendered partial/_footer.html.erb (0.5ms)
+  Rendered staff/edit_visitor.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 42ms (Views: 37.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/staff/dashboard/edit_visitor/pungki" for 127.0.0.1 at 2018-12-04 07:18:23 +0700
+Processing by StaffController#edit_visitor_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B/POGLstk+ohsQJMXSs9W9PCAABw/5DfeTnMI4tWQjjcPuUjwsiKBCe18eOyOZLMv8kAVY6ABSP7Yf/jaZqaVg==", "visitor"=>{"fullname"=>"Pungki Nurhuda", "age"=>"21"}, "username"=>"pungki"}
+  [1m[36mVisitor Load (0.3ms)[0m  [1m[34mSELECT  "visitors".* FROM "visitors" WHERE "visitors"."username" = $1 LIMIT $2[0m  [["username", "pungki"], ["LIMIT", 1]]
+  ↳ app/controllers/staff_controller.rb:105
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/staff_controller.rb:111
+  [1m[36mVisitor Update (0.4ms)[0m  [1m[33mUPDATE "visitors" SET "age" = $1, "updated_at" = $2 WHERE "visitors"."id" = $3[0m  [["age", 21], ["updated_at", "2018-12-04 00:18:23.416166"], ["id", 1]]
+  ↳ app/controllers/staff_controller.rb:111
+  [1m[35m (122.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/staff_controller.rb:111
+Redirected to http://127.0.0.1:3000/staff/dashboard/visitor
+Completed 302 Found in 127ms (ActiveRecord: 123.1ms)
+
+
+Started GET "/staff/dashboard/visitor" for 127.0.0.1 at 2018-12-04 07:18:23 +0700
+Processing by StaffController#manage_visitor as HTML
+  Rendering staff/manage_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.4ms)
+  [1m[36mVisitor Load (0.4ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors"[0m
+  ↳ app/views/staff/manage_visitor.html.erb:19
+  Rendered partial/_footer.html.erb (0.7ms)
+  Rendered staff/manage_visitor.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/staff/dashboard/edit_visitor/pungki/" for 127.0.0.1 at 2018-12-04 07:18:26 +0700
+Processing by StaffController#edit_visitor as HTML
+  Parameters: {"username"=>"pungki"}
+  [1m[36mVisitor Load (0.5ms)[0m  [1m[34mSELECT  "visitors".* FROM "visitors" WHERE "visitors"."username" = $1 LIMIT $2[0m  [["username", "pungki"], ["LIMIT", 1]]
+  ↳ app/controllers/staff_controller.rb:95
+  Rendering staff/edit_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.8ms)
+  Rendered partial/_footer.html.erb (0.6ms)
+  Rendered staff/edit_visitor.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 49ms (Views: 46.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/staff/dashboard/edit_visitor/pungki" for 127.0.0.1 at 2018-12-04 07:18:28 +0700
+Processing by StaffController#edit_visitor_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"68rj24kxSwE8C1U+2COKpsHJmY/+vkS4AD4McBsP5DIwB8jg8NRS7zoPppE3MSUxrcKZ2gDB0USCZj+w+cM8XA==", "visitor"=>{"fullname"=>"Pungki Nurhuda", "age"=>"20"}, "username"=>"pungki"}
+  [1m[36mVisitor Load (0.3ms)[0m  [1m[34mSELECT  "visitors".* FROM "visitors" WHERE "visitors"."username" = $1 LIMIT $2[0m  [["username", "pungki"], ["LIMIT", 1]]
+  ↳ app/controllers/staff_controller.rb:105
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/staff_controller.rb:111
+  [1m[36mVisitor Update (0.4ms)[0m  [1m[33mUPDATE "visitors" SET "age" = $1, "updated_at" = $2 WHERE "visitors"."id" = $3[0m  [["age", 20], ["updated_at", "2018-12-04 00:18:28.940752"], ["id", 1]]
+  ↳ app/controllers/staff_controller.rb:111
+  [1m[35m (149.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/staff_controller.rb:111
+Redirected to http://127.0.0.1:3000/staff/dashboard/visitor
+Completed 302 Found in 155ms (ActiveRecord: 150.7ms)
+
+
+Started GET "/staff/dashboard/visitor" for 127.0.0.1 at 2018-12-04 07:18:29 +0700
+Processing by StaffController#manage_visitor as HTML
+  Rendering staff/manage_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.6ms)
+  [1m[36mVisitor Load (0.3ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors"[0m
+  ↳ app/views/staff/manage_visitor.html.erb:19
+  Rendered partial/_footer.html.erb (0.4ms)
+  Rendered staff/manage_visitor.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 52ms (Views: 50.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/staff/dashboard/edit_visitor/irsyad/" for 127.0.0.1 at 2018-12-04 07:18:31 +0700
+Processing by StaffController#edit_visitor as HTML
+  Parameters: {"username"=>"irsyad"}
+  [1m[36mVisitor Load (0.4ms)[0m  [1m[34mSELECT  "visitors".* FROM "visitors" WHERE "visitors"."username" = $1 LIMIT $2[0m  [["username", "irsyad"], ["LIMIT", 1]]
+  ↳ app/controllers/staff_controller.rb:95
+  Rendering staff/edit_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.6ms)
+  Rendered partial/_footer.html.erb (0.5ms)
+  Rendered staff/edit_visitor.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 51ms (Views: 48.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/staff/dashboard/edit_visitor/irsyad" for 127.0.0.1 at 2018-12-04 07:18:33 +0700
+Processing by StaffController#edit_visitor_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pEX/LiGCFawLAgFHJtFEbnZG1az1vVzJX4PyGltWLewlYnblpm0ug3QZewoWOSjEiTjOWIqZbDcwOUGO6PDwlA==", "visitor"=>{"fullname"=>"Irsyad Fauzan", "age"=>"21"}, "username"=>"irsyad"}
+  [1m[36mVisitor Load (0.2ms)[0m  [1m[34mSELECT  "visitors".* FROM "visitors" WHERE "visitors"."username" = $1 LIMIT $2[0m  [["username", "irsyad"], ["LIMIT", 1]]
+  ↳ app/controllers/staff_controller.rb:105
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/staff_controller.rb:111
+  [1m[36mVisitor Update (0.3ms)[0m  [1m[33mUPDATE "visitors" SET "age" = $1, "updated_at" = $2 WHERE "visitors"."id" = $3[0m  [["age", 21], ["updated_at", "2018-12-04 00:18:33.502133"], ["id", 2]]
+  ↳ app/controllers/staff_controller.rb:111
+  [1m[35m (78.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/staff_controller.rb:111
+Redirected to http://127.0.0.1:3000/staff/dashboard/visitor
+Completed 302 Found in 84ms (ActiveRecord: 78.7ms)
+
+
+Started GET "/staff/dashboard/visitor" for 127.0.0.1 at 2018-12-04 07:18:33 +0700
+Processing by StaffController#manage_visitor as HTML
+  Rendering staff/manage_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.7ms)
+  [1m[36mVisitor Load (0.3ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors"[0m
+  ↳ app/views/staff/manage_visitor.html.erb:19
+  Rendered partial/_footer.html.erb (0.5ms)
+  Rendered staff/manage_visitor.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 52ms (Views: 50.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/staff/dashboard/edit_visitor/irsyad/" for 127.0.0.1 at 2018-12-04 07:18:35 +0700
+Processing by StaffController#edit_visitor as HTML
+  Parameters: {"username"=>"irsyad"}
+  [1m[36mVisitor Load (0.3ms)[0m  [1m[34mSELECT  "visitors".* FROM "visitors" WHERE "visitors"."username" = $1 LIMIT $2[0m  [["username", "irsyad"], ["LIMIT", 1]]
+  ↳ app/controllers/staff_controller.rb:95
+  Rendering staff/edit_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.6ms)
+  Rendered partial/_footer.html.erb (0.5ms)
+  Rendered staff/edit_visitor.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 48ms (Views: 44.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/staff/dashboard/edit_visitor/irsyad" for 127.0.0.1 at 2018-12-04 07:18:37 +0700
+Processing by StaffController#edit_visitor_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0qDmXwoOu0/i7akSJqYeg8rmIyTur7auK/ZAq2AudDlTh2+UjeGAYJ32018WTnIpNZg40JGLhlBETPM/04ipQQ==", "visitor"=>{"fullname"=>"Irsyad Fauzan", "age"=>"20"}, "username"=>"irsyad"}
+  [1m[36mVisitor Load (0.2ms)[0m  [1m[34mSELECT  "visitors".* FROM "visitors" WHERE "visitors"."username" = $1 LIMIT $2[0m  [["username", "irsyad"], ["LIMIT", 1]]
+  ↳ app/controllers/staff_controller.rb:105
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/staff_controller.rb:111
+  [1m[36mVisitor Update (0.6ms)[0m  [1m[33mUPDATE "visitors" SET "age" = $1, "updated_at" = $2 WHERE "visitors"."id" = $3[0m  [["age", 20], ["updated_at", "2018-12-04 00:18:37.919293"], ["id", 2]]
+  ↳ app/controllers/staff_controller.rb:111
+  [1m[35m (220.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/staff_controller.rb:111
+Redirected to http://127.0.0.1:3000/staff/dashboard/visitor
+Completed 302 Found in 226ms (ActiveRecord: 221.4ms)
+
+
+Started GET "/staff/dashboard/visitor" for 127.0.0.1 at 2018-12-04 07:18:38 +0700
+Processing by StaffController#manage_visitor as HTML
+  Rendering staff/manage_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.3ms)
+  [1m[36mVisitor Load (0.3ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors"[0m
+  ↳ app/views/staff/manage_visitor.html.erb:19
+  Rendered partial/_footer.html.erb (0.4ms)
+  Rendered staff/manage_visitor.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 42ms (Views: 40.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/staff/dashboard/visitor" for 127.0.0.1 at 2018-12-04 07:20:57 +0700
+Processing by StaffController#manage_visitor as HTML
+  Rendering staff/manage_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.4ms)
+  [1m[36mVisitor Load (0.3ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors"[0m
+  ↳ app/views/staff/manage_visitor.html.erb:19
+  Rendered partial/_footer.html.erb (0.4ms)
+  Rendered staff/manage_visitor.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 72ms (Views: 68.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/staff/dashboard/remove_visitor/irsyad/" for 127.0.0.1 at 2018-12-04 07:20:59 +0700
+Processing by StaffController#remove_visitor as HTML
+  Parameters: {"username"=>"irsyad"}
+  [1m[36mVisitor Load (0.4ms)[0m  [1m[34mSELECT  "visitors".* FROM "visitors" WHERE "visitors"."username" = $1 LIMIT $2[0m  [["username", "irsyad"], ["LIMIT", 1]]
+  ↳ app/controllers/staff_controller.rb:123
+  [1m[36mVisitor Destroy (144.9ms)[0m  [1m[31mDELETE FROM "visitors" WHERE "visitors"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/staff_controller.rb:124
+Redirected to http://127.0.0.1:3000/staff/dashboard/visitor
+Completed 302 Found in 154ms (ActiveRecord: 145.2ms)
+
+
+Started GET "/staff/dashboard/visitor" for 127.0.0.1 at 2018-12-04 07:20:59 +0700
+Processing by StaffController#manage_visitor as HTML
+  Rendering staff/manage_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.5ms)
+  [1m[36mVisitor Load (0.3ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors"[0m
+  ↳ app/views/staff/manage_visitor.html.erb:19
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/manage_visitor.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/staff/dashboard/" for 127.0.0.1 at 2018-12-04 07:21:06 +0700
+Processing by StaffController#dashboard as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "visitors"[0m
+  ↳ app/controllers/staff_controller.rb:37
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/staff_controller.rb:38
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions"[0m
+  ↳ app/controllers/staff_controller.rb:39
+  Rendering staff/dashboard.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.4ms)
+  Rendered partial/_footer.html.erb (0.6ms)
+  Rendered staff/dashboard.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 52ms (Views: 35.3ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/staff/dashboard/visitor/" for 127.0.0.1 at 2018-12-04 07:21:09 +0700
+Processing by StaffController#manage_visitor as HTML
+  Rendering staff/manage_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.5ms)
+  [1m[36mVisitor Load (0.5ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors"[0m
+  ↳ app/views/staff/manage_visitor.html.erb:19
+  Rendered partial/_footer.html.erb (0.4ms)
+  Rendered staff/manage_visitor.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 0.5ms)
+
+

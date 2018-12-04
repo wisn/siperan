@@ -39,6 +39,93 @@ class StaffController < ApplicationController
     @transactions_total = Transaction.count
   end
 
+  def logout
+    session.delete :user_type
+    session.delete :user_data
+
+    redirect_to :staff_login
+  end
+
+  def change_password
+    redirect_if_not_staff
+  end
+
+  def change_password_validation
+    @staff = Staff.new change_password_params
+    @staff.username = session[:user_data]['username']
+
+    if @staff.valid? :reset_password
+      password = @staff.password
+
+      @staff = Staff.find_by username: @staff.username
+      @staff.password = password
+
+      if @staff.save
+        logout
+      else
+        @staff.errors.messages[:server] = ['encounter a problem']
+      end
+    else
+      render 'change_password'
+    end
+  end
+
+  def manage_visitor
+    redirect_if_not_staff
+
+    @visitor = Visitor.all
+  end
+
+  def new_visitor
+    redirect_if_not_staff
+  end
+
+  def new_visitor_validation
+    @visitor = Visitor.new new_visitor_params
+    if @visitor.save context: :adds
+      redirect_to :staff_manage_visitor
+    else
+      render 'new_visitor'
+    end
+  end
+
+  def edit_visitor
+    redirect_if_not_staff
+
+    visitor = Visitor.find_by username: params[:username]
+    if visitor.present?
+      @visitor = visitor
+    else
+      redirect_to :staff_manage_visitor
+    end
+  end
+
+  def edit_visitor_validation
+    username = params[:username]
+    visitor = Visitor.find_by username: username
+    if visitor.present?
+      params = edit_visitor_params
+      visitor.fullname = params[:fullname]
+      visitor.age = params[:age]
+
+      if visitor.save context: :edits
+        redirect_to :staff_manage_visitor
+      else
+        @visitor = visitor
+        render 'edit_visitor'
+      end
+    else
+      redirect_to :staff_manage_visitor
+    end
+  end
+
+  def remove_visitor
+    visitor = Visitor.find_by username: params[:username]
+    visitor.delete if visitor.present?
+
+    redirect_to :staff_manage_visitor
+  end
+
   private
     def redirect_if_not_staff
       is_logged_in = session[:user_type].present?
@@ -63,6 +150,18 @@ class StaffController < ApplicationController
 
     def login_params
       params.require(:staff).permit :username, :password
+    end
+
+    def change_password_params
+      params.require(:staff).permit :password, :password_confirmation
+    end
+
+    def new_visitor_params
+      params.require(:visitor).permit :fullname, :username, :age
+    end
+
+    def edit_visitor_params
+      params.require(:visitor).permit :fullname, :age
     end
 
     def create_session staff

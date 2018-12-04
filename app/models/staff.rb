@@ -43,4 +43,14 @@ class Staff < ApplicationRecord
       allow_blank: true,
       allow_nil: true
   end
+
+  with_options on: :change_password do |change_password|
+    change_password.has_secure_password
+
+    change_password.validates :password,
+      confirmation: true,
+      length: { minimum: 4 }
+    change_password.validates :password_confirmation,
+      presence: true
+  end
 end

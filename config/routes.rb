@@ -82,9 +82,36 @@ Rails.application.routes.draw do
     post :login, to: 'staff#login_validation',
       as: :staff_login_validation
 
+    get :logout, to: 'staff#logout',
+      as: :staff_logout
+
     scope :dashboard do
       get '/', to: 'staff#dashboard',
         as: :staff_dashboard
+
+      get :change_password, to: 'staff#change_password',
+        as: :staff_change_password
+
+      post :change_password, to: 'staff#change_password_validation',
+        as: :staff_change_password_validation
+
+      get :visitor, to: 'staff#manage_visitor',
+        as: :staff_manage_visitor
+
+      get :new_visitor, to: 'staff#new_visitor',
+        as: :staff_new_visitor
+
+      post :new_visitor, to: 'staff#new_visitor_validation',
+        as: :staff_new_visitor_validation
+
+      get '/edit_visitor/:username', to: 'staff#edit_visitor',
+        as: :staff_edit_visitor
+
+      post '/edit_visitor/:username', to: 'staff#edit_visitor_validation',
+        as: :staff_edit_visitor_validation
+
+      get '/remove_visitor/:username', to: 'staff#remove_visitor',
+        as: :staff_remove_visitor
     end
   end
 end
