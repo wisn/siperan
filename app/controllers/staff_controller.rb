@@ -125,6 +125,122 @@ class StaffController < ApplicationController
 
     redirect_to :staff_manage_visitor
   end
+  
+  def manage_book
+    redirect_if_not_staff
+
+    @book = Book.all
+  end
+
+  def new_book
+    redirect_if_not_staff
+  end
+
+  def new_book_validation
+    @book = Book.new new_book_params
+    if @book.save context: :adds
+      redirect_to :staff_manage_book
+    else
+      render 'new_book'
+    end
+  end
+
+  def edit_book
+    redirect_if_not_staff
+
+    book = Book.find_by isbn: params[:isbn]
+    if book.present?
+      @book = book
+    else
+      redirect_to :staff_manage_book
+    end
+  end
+
+  def edit_book_validation
+    isbn = params[:isbn]
+    book = Book.find_by isbn: isbn
+    if book.present?
+      params = edit_book_params
+      book.title = params[:title]
+      book.author = params[:author]
+      book.synopsis = params[:synopsis]
+
+      if book.save context: :edits
+        redirect_to :staff_manage_book
+      else
+        @book = book
+        render 'edit_book'
+      end
+    else
+      redirect_to :staff_manage_book
+    end
+  end
+
+  def manage_transaction
+    redirect_if_not_staff
+
+    @transaction = Transaction.all
+  end
+
+  def new_borrowing
+    redirect_if_not_staff
+  end
+
+  def new_borrowing_validation
+    if Visitor.find_by(username: transaction_params[:visitor_username]).present?
+      if Book.find_by(isbn: transaction_params[:book_isbn]).present?
+        @transaction = Transaction.new transaction_params
+        @transaction.staff_username = session[:user_data]['username']
+        @transaction.is_borrowing = true
+
+        if @transaction.save context: :transaction
+          redirect_to :staff_manage_transaction
+        else
+          render 'new_borrowing'
+        end
+      else
+        @transaction = Transaction.new
+        @transaction.errors.messages[:book_isbn] = ['does not exists']
+
+        render 'new_borrowing'
+      end
+    else
+      @transaction = Transaction.new
+      @transaction.errors.messages[:visitor_username] = ['does not exists']
+
+      render 'new_borrowing'
+    end
+  end
+
+  def new_returning
+    redirect_if_not_staff
+  end
+
+  def new_returning_validation
+    if Visitor.find_by(username: transaction_params[:visitor_username]).present?
+      if Book.find_by(isbn: transaction_params[:book_isbn]).present?
+        @transaction = Transaction.new transaction_params
+        @transaction.staff_username = session[:user_data]['username']
+        @transaction.is_borrowing = false
+
+        if @transaction.save context: :transaction
+          redirect_to :staff_manage_transaction
+        else
+          render 'new_returning'
+        end
+      else
+        @transaction = Transaction.new
+        @transaction.errors.messages[:book_isbn] = ['does not exists']
+
+        render 'new_returning'
+      end
+    else
+      @transaction = Transaction.new
+      @transaction.errors.messages[:visitor_username] = ['does no exists']
+
+      render 'new_returning'
+    end
+  end
 
   private
     def redirect_if_not_staff
@@ -162,6 +278,18 @@ class StaffController < ApplicationController
 
     def edit_visitor_params
       params.require(:visitor).permit :fullname, :age
+    end
+
+    def new_book_params
+      params.require(:book).permit :isbn, :title, :author, :synopsis
+    end
+
+    def edit_book_params
+      params.require(:book).permit :title, :author, :synopsis
+    end
+
+    def transaction_params
+      params.require(:transaction).permit :visitor_username, :book_isbn
     end
 
     def create_session staff

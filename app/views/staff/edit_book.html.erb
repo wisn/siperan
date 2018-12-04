@@ -1,0 +1,47 @@
+<% content_for :title, 'Manage Book | SIPERAN' %>
+
+<%= render 'dashboard_header' %>
+
+<main class="dashboard">
+  <div class="container">
+    <div align="center">
+      <h1>Updating Book</h1>
+      <div class="hr"></div>
+    </div>
+    <section class="form">
+      <%= form_with scope: :book, url: :staff_edit_book_validation, local: true do |form| %>
+        <div class="row">
+          <%= form.text_field :isbn, placeholder: 'ISBN', disabled: true %>
+        </div>
+        <div class="row">
+          <%= form.text_field :title, placeholder: 'Title' %>
+        </div>
+        <div class="row">
+          <%= form.text_field :author, placeholder: 'Author' %>
+        </div>
+        <div class="row">
+          <%= form.text_field :synopsis, placeholder: 'Synopsis' %>
+        </div>
+        <div class="row">
+          <input class="dark-primary-color-bg" type="submit" value="Update Book">
+        </div>
+
+        <% if @book and @book.errors.any? %>
+          <div class="error-message">
+            <h2>Error occurred:</h2>
+            <ul>
+              <% @book.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+      <% end%>
+    </section>
+  </div>
+</main>
+
+<footer class="single-page">
+  <%= render 'partial/footer' %>
+</footer>
+

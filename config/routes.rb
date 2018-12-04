@@ -112,6 +112,36 @@ Rails.application.routes.draw do
 
       get '/remove_visitor/:username', to: 'staff#remove_visitor',
         as: :staff_remove_visitor
+
+      get :book, to: 'staff#manage_book',
+        as: :staff_manage_book
+
+      get :new_book, to: 'staff#new_book',
+        as: :staff_new_book
+
+      post :new_book, to: 'staff#new_book_validation',
+        as: :staff_new_book_validation
+
+      get '/edit_book/:isbn', to: 'staff#edit_book',
+        as: :staff_edit_book
+
+      post '/edit_book/:isbn', to: 'staff#edit_book_validation',
+        as: :staff_edit_book_validation
+
+      get :transaction, to: 'staff#manage_transaction',
+        as: :staff_manage_transaction
+
+      get :new_borrowing, to: 'staff#new_borrowing',
+        as: :staff_new_borrowing
+
+      post :new_borrowing, to: 'staff#new_borrowing_validation',
+        as: :staff_new_borrowing_validation
+
+      get :new_returning, to: 'staff#new_returning',
+        as: :staff_new_returning
+
+      post :new_returning, to: 'staff#new_returning_validation',
+        as: :staff_new_returning_validation
     end
   end
 end

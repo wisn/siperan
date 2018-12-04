@@ -1,0 +1,41 @@
+<% content_for :title, 'Manage Transaction | SIPERAN' %>
+
+<%= render 'dashboard_header' %>
+
+<main class="dashboard">
+  <div class="container">
+    <div align="center">
+      <h1>Add a New Borrowing</h1>
+      <div class="hr"></div>
+    </div>
+    <section class="form">
+      <%= form_with scope: :transaction, url: :staff_new_borrowing_validation, local: true do |form| %>
+        <div class="row">
+          <%= form.text_field :visitor_username, placeholder: 'Visitor Username' %>
+        </div>
+        <div class="row">
+          <%= form.text_field :book_isbn, placeholder: 'Book ISBN' %>
+        </div>
+        <div class="row">
+          <input class="dark-primary-color-bg" type="submit" value="Borrow Now">
+        </div>
+
+        <% if @transaction and @transaction.errors.any? %>
+          <div class="error-message">
+            <h2>Error occurred:</h2>
+            <ul>
+              <% @transaction.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+      <% end%>
+    </section>
+  </div>
+</main>
+
+<footer class="single-page">
+  <%= render 'partial/footer' %>
+</footer>
+

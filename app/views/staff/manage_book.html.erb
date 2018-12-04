@@ -1,0 +1,60 @@
+<% content_for :title, 'Manage Book | SIPERAN' %>
+
+<%= render 'dashboard_header' %>
+
+<main class="dashboard">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <h1>Manage Book</h1>
+        <div class="hr"></div>
+      </div>
+      <div class="col-sm-4 menu">
+        <a class="button" href="/staff/dashboard/new_book">
+          Add a New Book
+        </a>
+      </div>
+    </div>
+    <section class="list">
+      <% if @book.present? %>
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">ISBN</th>
+              <th scope="col">Title</th>
+              <th scope="col">Author</th>
+              <th scope="col">Synopsis</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <% i = 0 %>
+          <tbody>
+            <% @book.each do |b| %>
+              <tr>
+                <th scope="row"><%= i += 1 %></th>
+                <td><%= b.isbn %></td>
+                <td><%= b.title %></td>
+                <td><%= b.author %></td>
+                <td><%= b.synopsis %></td>
+                <td>
+                  <a class="btn btn-sm btn-primary" href="/staff/dashboard/edit_book/<%= b.isbn %>/">Edit</a>
+                  <a class="btn btn-sm btn-danger" href="/staff/dashboard/remove_book/<%= b.isbn %>/">Remove</a>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <div align="center" class="no-data">
+          Currently, there is no book. Consider to add a new one.
+        </div>
+      <% end %>
+    </section>
+  </div>
+</main>
+
+<footer class="single-page">
+  <%= render 'partial/footer' %>
+</footer>
+

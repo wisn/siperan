@@ -1,0 +1,60 @@
+<% content_for :title, 'Manage Transaction | SIPERAN' %>
+
+<%= render 'dashboard_header' %>
+
+<main class="dashboard">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <h1>Manage Transaction</h1>
+        <div class="hr"></div>
+      </div>
+      <div class="col-sm-4 menu">
+        <a class="button" href="/staff/dashboard/new_borrowing">
+          Borrowing a Book
+        </a>
+        <a class="button" href="/staff/dashboard/new_returning">
+          Returning a Book
+        </a>
+      </div>
+    </div>
+    <section class="list">
+      <% if @transaction.present? %>
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Staff Username</th>
+              <th scope="col">Visitor Username</th>
+              <th scope="col">Book ISBN</th>
+              <th scope="col">Borrowing?</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <% i = 0 %>
+          <tbody>
+            <% @transaction.each do |t| %>
+              <tr>
+                <th scope="row"><%= i += 1 %></th>
+                <td><%= t.staff_username %></td>
+                <td><%= t.visitor_username %></td>
+                <td><%= t.book_isbn %></td>
+                <td><%= t.is_borrowing ? 'Yes' : 'No' %></td>
+                <td><%= t.created_at %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      <% else %>
+        <div align="center" class="no-data">
+          Currently, there is no transaction. Consider to add a new one.
+        </div>
+      <% end %>
+    </section>
+  </div>
+</main>
+
+<footer class="single-page">
+  <%= render 'partial/footer' %>
+</footer>
+
