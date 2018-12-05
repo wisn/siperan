@@ -176,6 +176,13 @@ class StaffController < ApplicationController
     end
   end
 
+  def remove_book
+    book = Book.find_by isbn: params[:isbn]
+    book.delete if book.present?
+
+    redirect_to :staff_manage_book
+  en
+
   def manage_transaction
     redirect_if_not_staff
 

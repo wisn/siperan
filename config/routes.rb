@@ -128,6 +128,9 @@ Rails.application.routes.draw do
       post '/edit_book/:isbn', to: 'staff#edit_book_validation',
         as: :staff_edit_book_validation
 
+      get '/remove_book/:isbn', to: 'staff#remove_book',
+        as: :staff_remove_book
+
       get :transaction, to: 'staff#manage_transaction',
         as: :staff_manage_transaction
 
