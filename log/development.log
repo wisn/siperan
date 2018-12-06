@@ -11891,3 +11891,230 @@ Processing by StaffController#manage_transaction as HTML
 Completed 200 OK in 49ms (Views: 46.8ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-12-06 09:17:46 +0700
+  [1m[35m (16.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/wisnu/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/home/wisnu/Repos/github/wisn/siperan/app/controllers/staff_controller.rb:306: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/staff_controller.rb:306: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2018-12-06 09:18:21 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/login.html.erb within layouts/application (58.4ms)
+Completed 200 OK in 1160ms (Views: 1139.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/staff/login" for 127.0.0.1 at 2018-12-06 09:18:42 +0700
+Processing by StaffController#login_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+nqVVZ1oX+Xd0u3xaT7ae0VPPBZsYW9/sHUm6Q9ECn1NxGhqffgmKM7NBiM23LQo55k68kAJUWLiaXcjXqf+XA==", "staff"=>{"username"=>"pungki", "password"=>"[FILTERED]"}}
+  [1m[36mStaff Load (48.9ms)[0m  [1m[34mSELECT  "staffs".* FROM "staffs" WHERE "staffs"."username" = $1 LIMIT $2[0m  [["username", "pungki"], ["LIMIT", 1]]
+  ↳ app/controllers/staff_controller.rb:19
+Completed 500 Internal Server Error in 309ms (ActiveRecord: 160.7ms)
+
+
+  
+NoMethodError (undefined method `message' for #<ActiveModel::Errors:0x00007fd3750a64f0>
+Did you mean?  messages):
+  
+app/controllers/staff_controller.rb:25:in `login_validation'
+Started POST "/staff/login" for 127.0.0.1 at 2018-12-06 09:19:07 +0700
+Processing by StaffController#login_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+nqVVZ1oX+Xd0u3xaT7ae0VPPBZsYW9/sHUm6Q9ECn1NxGhqffgmKM7NBiM23LQo55k68kAJUWLiaXcjXqf+XA==", "staff"=>{"username"=>"pungki", "password"=>"[FILTERED]"}}
+  [1m[36mStaff Load (0.4ms)[0m  [1m[34mSELECT  "staffs".* FROM "staffs" WHERE "staffs"."username" = $1 LIMIT $2[0m  [["username", "pungki"], ["LIMIT", 1]]
+  ↳ app/controllers/staff_controller.rb:19
+  Rendering staff/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/login.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 155ms (Views: 36.3ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/admin/login/" for 127.0.0.1 at 2018-12-06 09:19:14 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered admin/login.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 73ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2018-12-06 09:19:16 +0700
+Processing by AdminController#login_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"36X0MuTQRVPNVAsNVX/vq8ksS7gpJboHS6Y6ERPmyE7WLY+m5hmgL05UCyELm+xiw8W66OtIA2XpCwmP30Ding==", "admin"=>{"username"=>"admin", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (45.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."username" = $1 LIMIT $2[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/admin_controller.rb:19
+Redirected to http://127.0.0.1:3000/admin/dashboard
+Completed 302 Found in 331ms (ActiveRecord: 51.9ms)
+
+
+Started GET "/admin/dashboard" for 127.0.0.1 at 2018-12-06 09:19:16 +0700
+Processing by AdminController#dashboard as HTML
+  [1m[35m (35.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "staffs"[0m
+  ↳ app/controllers/admin_controller.rb:160
+  [1m[35m (37.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/admin_controller.rb:161
+  [1m[35m (62.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions"[0m
+  ↳ app/controllers/admin_controller.rb:162
+  Rendering admin/dashboard.html.erb within layouts/application
+  Rendered admin/_dashboard_header.html.erb (0.4ms)
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered admin/dashboard.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 270ms (Views: 43.6ms | ActiveRecord: 138.3ms)
+
+
+Started GET "/admin/dashboard/staff/" for 127.0.0.1 at 2018-12-06 09:19:19 +0700
+Processing by AdminController#manage_staff as HTML
+  Rendering admin/manage_staff.html.erb within layouts/application
+  Rendered admin/_dashboard_header.html.erb (0.7ms)
+  [1m[36mStaff Load (0.4ms)[0m  [1m[34mSELECT "staffs".* FROM "staffs"[0m
+  ↳ app/views/admin/manage_staff.html.erb:19
+  Rendered partial/_footer.html.erb (0.5ms)
+  Rendered admin/manage_staff.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 122ms (Views: 54.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/logout/" for 127.0.0.1 at 2018-12-06 09:19:21 +0700
+Processing by AdminController#logout as HTML
+Redirected to http://127.0.0.1:3000/admin/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2018-12-06 09:19:21 +0700
+Processing by AdminController#login as HTML
+  Rendering admin/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered admin/login.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/staff/login/" for 127.0.0.1 at 2018-12-06 09:19:24 +0700
+Processing by StaffController#login as HTML
+  Rendering staff/login.html.erb within layouts/application
+  Rendered partial/_footer.html.erb (0.4ms)
+  Rendered staff/login.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/staff/login" for 127.0.0.1 at 2018-12-06 09:19:26 +0700
+Processing by StaffController#login_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PcOg4waOHHEvWlk9o1tUQbumIA/WxoE8foGLUwJE79BQZEncBFJz032ww4leRKctTv+EbKphfuipQfPa4Ghjog==", "staff"=>{"username"=>"wisn", "password"=>"[FILTERED]"}}
+  [1m[36mStaff Load (0.3ms)[0m  [1m[34mSELECT  "staffs".* FROM "staffs" WHERE "staffs"."username" = $1 LIMIT $2[0m  [["username", "wisn"], ["LIMIT", 1]]
+  ↳ app/controllers/staff_controller.rb:19
+Redirected to http://127.0.0.1:3000/staff/dashboard
+Completed 302 Found in 201ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/staff/dashboard" for 127.0.0.1 at 2018-12-06 09:19:26 +0700
+Processing by StaffController#dashboard as HTML
+  [1m[35m (63.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "visitors"[0m
+  ↳ app/controllers/staff_controller.rb:37
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "books"[0m
+  ↳ app/controllers/staff_controller.rb:38
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "transactions"[0m
+  ↳ app/controllers/staff_controller.rb:39
+  Rendering staff/dashboard.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.5ms)
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/dashboard.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 240ms (Views: 48.4ms | ActiveRecord: 65.5ms)
+
+
+Started GET "/staff/dashboard/book/" for 127.0.0.1 at 2018-12-06 09:19:29 +0700
+Processing by StaffController#manage_book as HTML
+  Rendering staff/manage_book.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.4ms)
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/staff/manage_book.html.erb:19
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/manage_book.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 129ms (Views: 53.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/staff/dashboard/new_book" for 127.0.0.1 at 2018-12-06 09:19:30 +0700
+Processing by StaffController#new_book as HTML
+  Rendering staff/new_book.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.7ms)
+  Rendered partial/_footer.html.erb (0.5ms)
+  Rendered staff/new_book.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 46ms (Views: 40.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/staff/dashboard/new_book" for 127.0.0.1 at 2018-12-06 09:20:04 +0700
+Processing by StaffController#new_book_validation as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WxqYcOp7iU92tUuwx+IycdgMcCtK5I3CB55FU3rju4CzCVbIV0LnVrh+n7wb66V/Vw921M8Y5223se806dRx+g==", "book"=>{"isbn"=>"123456780", "title"=>"The Lambda Calculus", "author"=>"Pete John", "synopsis"=>"Lorem ipsum blablablabla"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/staff_controller.rb:141
+  [1m[36mBook Create (177.5ms)[0m  [1m[32mINSERT INTO "books" ("isbn", "title", "author", "synopsis", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["isbn", "123456780"], ["title", "The Lambda Calculus"], ["author", "Pete John"], ["synopsis", "Lorem ipsum blablablabla"], ["created_at", "2018-12-06 02:20:04.589363"], ["updated_at", "2018-12-06 02:20:04.589363"]]
+  ↳ app/controllers/staff_controller.rb:141
+  [1m[35m (47.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/staff_controller.rb:141
+Redirected to http://127.0.0.1:3000/staff/dashboard/book
+Completed 302 Found in 229ms (ActiveRecord: 225.4ms)
+
+
+Started GET "/staff/dashboard/book" for 127.0.0.1 at 2018-12-06 09:20:04 +0700
+Processing by StaffController#manage_book as HTML
+  Rendering staff/manage_book.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.4ms)
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/staff/manage_book.html.erb:19
+  Rendered partial/_footer.html.erb (0.5ms)
+  Rendered staff/manage_book.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/staff/dashboard/remove_book/123456780/" for 127.0.0.1 at 2018-12-06 09:20:09 +0700
+Processing by StaffController#remove_book as HTML
+  Parameters: {"isbn"=>"123456780"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT  "books".* FROM "books" WHERE "books"."isbn" = $1 LIMIT $2[0m  [["isbn", "123456780"], ["LIMIT", 1]]
+  ↳ app/controllers/staff_controller.rb:180
+  [1m[36mBook Destroy (67.3ms)[0m  [1m[31mDELETE FROM "books" WHERE "books"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/staff_controller.rb:181
+Redirected to http://127.0.0.1:3000/staff/dashboard/book
+Completed 302 Found in 71ms (ActiveRecord: 67.7ms)
+
+
+Started GET "/staff/dashboard/book" for 127.0.0.1 at 2018-12-06 09:20:09 +0700
+Processing by StaffController#manage_book as HTML
+  Rendering staff/manage_book.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.4ms)
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/staff/manage_book.html.erb:19
+  Rendered partial/_footer.html.erb (0.3ms)
+  Rendered staff/manage_book.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 51ms (Views: 48.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/staff/dashboard/transaction/" for 127.0.0.1 at 2018-12-06 09:20:12 +0700
+Processing by StaffController#manage_transaction as HTML
+  Rendering staff/manage_transaction.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.3ms)
+  [1m[36mTransaction Load (0.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/staff/manage_transaction.html.erb:22
+  Rendered partial/_footer.html.erb (0.4ms)
+  Rendered staff/manage_transaction.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 108ms (Views: 43.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/staff/dashboard/visitor/" for 127.0.0.1 at 2018-12-06 09:20:18 +0700
+Processing by StaffController#manage_visitor as HTML
+  Rendering staff/manage_visitor.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.3ms)
+  [1m[36mVisitor Load (0.4ms)[0m  [1m[34mSELECT "visitors".* FROM "visitors"[0m
+  ↳ app/views/staff/manage_visitor.html.erb:19
+  Rendered partial/_footer.html.erb (0.4ms)
+  Rendered staff/manage_visitor.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 75ms (Views: 43.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/staff/dashboard/transaction/" for 127.0.0.1 at 2018-12-06 09:20:25 +0700
+Processing by StaffController#manage_transaction as HTML
+  Rendering staff/manage_transaction.html.erb within layouts/application
+  Rendered staff/_dashboard_header.html.erb (0.7ms)
+  [1m[36mTransaction Load (2.4ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/staff/manage_transaction.html.erb:22
+  Rendered partial/_footer.html.erb (0.6ms)
+  Rendered staff/manage_transaction.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 60ms (Views: 55.7ms | ActiveRecord: 2.4ms)
+
+

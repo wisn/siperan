@@ -22,7 +22,7 @@ class StaffController < ApplicationController
         redirect_to :staff_dashboard
       else
         @staff = Staff.new
-        @staff.errors.message[:account] = ['does not exists']
+        @staff.errors.messages[:account] = ['does not exists']
 
         render 'login'
       end
@@ -181,7 +181,7 @@ class StaffController < ApplicationController
     book.delete if book.present?
 
     redirect_to :staff_manage_book
-  en
+  end  
 
   def manage_transaction
     redirect_if_not_staff
